@@ -17,7 +17,7 @@ Fuwari牛逼，我这辈子都不会改博客框架了。
 
 - 晓晴博客： https://www.toubiec.cn/
 
-- 酷丁博客： https://b.co1d.in
+- 酷丁博客： https://coldin.top
 
 - 私人grgk：https://sub.grgk.me
 
