@@ -44,11 +44,6 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		LinkPreset.About,
 		{
-			name: "LinkMe",
-			url: "https://link.me/acofork", // Internal links should not include the base path, as it is automatically added
-			external: true, // Show an external link icon and will open in a new tab
-		},
-		{
 			name: "站点统计",
 			url: "https://cloud.umami.is/share/7PoDRgCzHFTs2vWB/afo.im", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
@@ -62,11 +57,11 @@ export const profileConfig: ProfileConfig = {
 	bio: "Protect What You Love!",
 	links: [
 		{
-			name: "Twitter",
-			icon: "fa6-brands:qq", // Visit https://icones.js.org/ for icon codes
+			name: "Telegram",
+			icon: "fa6-brands:telegram", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://qm.qq.com/cgi-bin/qm/qr?k=5Jb2bLVEHUBsDflZBcELLShCwOoT5suI&jump_from=webapi&authKey=VJ9aWs6454QXPONMQD19r68h7t8HvcWFOMandaNVLG+hWGGoqVs9r9bUpwZrfvlW",
+			url: "https://t.me/+blyHrp_GihhhMWVl",
 		},
 		{
 			name: "Bilibli",
@@ -76,7 +71,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
-			url: "https://github.com/saicaca/fuwari",
+			url: "https://github.com/afoim",
 		},
 	],
 };
