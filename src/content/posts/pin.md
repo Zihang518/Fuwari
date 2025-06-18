@@ -6,11 +6,7 @@ pinned: true
 description: 关于如何联系二叉树树~
 ---
 
-# 如果你是纯小白
-
-可以加入QQ群： 1051639698
-
-# 如果你知道如何加入Telegram群组
+# 加入Telegram群组
 
 直接点击此链接加入： https://t.me/+blyHrp_GihhhMWVl
 
@@ -18,15 +14,17 @@ description: 关于如何联系二叉树树~
 
 如果你是新号或者显示链接已失效，大概率是你的账号被风控了，可以加我tg： https://t.me/AcoFork 我来手动拉你进群
 
+> 如果你是小白，也可以加入QQ群：1051639698
+
 # 如果你没有一个科学上网工具
 
 点击此链接购买： https://wl2.awcmam.com/#/register?code=FNQwOQBM
 
-# 雨云服务器购买
+# 推销
 
-服务器： https://s.afo.im/yyb
+雨云服务器： https://www.rainyun.com/acofork_?s=blog
 
-## 最推荐加入TG群聊，如果实在无能为力就加入QQ群聊
+AK服务器（翻墙专用）： https://akile.io/register?aff_code=503fe5ea-e7c5-4d68-ae05-6d
 
 ---
 
