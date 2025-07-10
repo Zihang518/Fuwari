@@ -9,6 +9,10 @@ draft: false
 lang: ''
 ---
 
+# 配套视频
+
+https://www.bilibili.com/video/BV1w7GTzMEy7
+
 # 获取ITDog等拨测服务的IP
 
 > 因为Vercel不支持IPv6，所以我们只需要获取v4IP
@@ -103,7 +107,7 @@ def read_ips_from_file(file_path: str) -> List[str]:
     """
     ips = []
     invalid_entries = []
-    
+
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             for line_num, line in enumerate(f, 1):
@@ -113,16 +117,16 @@ def read_ips_from_file(file_path: str) -> List[str]:
                         ips.append(ip)
                     else:
                         invalid_entries.append(f"第{line_num}行: {ip}")
-        
+
         print(f"从文件 {file_path} 读取到 {len(ips)} 个有效的IP地址/CIDR网段")
-        
+
         if invalid_entries:
             print(f"⚠️  发现 {len(invalid_entries)} 个无效条目:")
             for entry in invalid_entries[:5]:  # 只显示前5个
                 print(f"   {entry}")
             if len(invalid_entries) > 5:
                 print(f"   ... 还有 {len(invalid_entries) - 5} 个无效条目")
-        
+
         return ips
     except FileNotFoundError:
         print(f"错误: 文件 {file_path} 不存在")
@@ -184,28 +188,28 @@ def send_request(payload: Dict[str, Any]) -> bool:
     发送PATCH请求到Vercel API
     """
     url = f"{API_BASE_URL}?projectId={PROJECT_ID}&teamId={TEAM_ID}"
-    
+
     headers = {
         "Authorization": f"Bearer {AUTH_TOKEN}",
         "Content-Type": "application/json"
     }
-    
+
     try:
         print(f"发送请求到: {url}")
         print(f"请求数据: {json.dumps(payload, indent=2, ensure_ascii=False)}")
-        
+
         response = requests.patch(url, headers=headers, json=payload)
-        
+
         print(f"响应状态码: {response.status_code}")
         print(f"响应内容: {response.text}")
-        
+
         if response.status_code == 200:
             print("✅ 请求成功")
             return True
         else:
             print(f"❌ 请求失败: {response.status_code} - {response.text}")
             return False
-            
+
     except requests.exceptions.RequestException as e:
         print(f"❌ 网络请求错误: {e}")
         return False
@@ -221,36 +225,36 @@ def main():
         print("用法: python vercelnoitdog.py <ip_file.txt>")
         print("示例: python vercelnoitdog.py ips.txt")
         sys.exit(1)
-    
+
     ip_file = sys.argv[1]
-    
+
     # 读取IP地址
     ips = read_ips_from_file(ip_file)
-    
+
     if not ips:
         print("❌ 没有找到有效的IP地址或CIDR网段")
         sys.exit(1)
-    
+
     # 去重
     unique_ips = list(set(ips))
     print(f"去重后共有 {len(unique_ips)} 个唯一IP地址/CIDR网段")
-    
+
     # 分组
     ip_chunks = chunk_ips(unique_ips)
     print(f"IP地址被分为 {len(ip_chunks)} 组")
-    
+
     for i, chunk in enumerate(ip_chunks, 1):
         print(f"第 {i} 组: {len(chunk)} 个IP/CIDR")
-    
+
     # 创建条件组
     condition_groups = create_condition_groups(ip_chunks)
-    
+
     # 创建请求负载
     payload = create_request_payload(condition_groups)
-    
+
     # 发送请求
     success = send_request(payload)
-    
+
     if success:
         print("\n🎉 防火墙规则更新成功!")
     else:
