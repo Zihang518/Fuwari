@@ -7,6 +7,7 @@ import { i18n } from "../i18n/translation";
 import { getDir } from "../utils/url-utils";
 import PostMetadata from "./PostMeta.astro";
 import ImageWrapper from "./misc/ImageWrapper.astro";
+import { umamiConfig } from "../config";
 
 interface Props {
 	class?: string;
@@ -98,12 +99,16 @@ const { remarkPluginFrontmatter } = await entry.render();
 </div>
 <div class="transition border-t-[1px] border-dashed mx-6 border-black/10 dark:border-white/[0.15] last:border-t-0 md:hidden"></div>
 
-<script define:vars={{ entry }}>
+<script define:vars={{ entry, umamiConfig }}>
     // 获取文章浏览量统计
     async function fetchPostCardViews(slug) {
+        if (!umamiConfig.enable) {
+            return;
+        }
+        
         try {
             // 第一步：获取网站ID和token
-            const shareResponse = await fetch('https://us.umami.is/api/share/7PoDRgCzHFTs2vWB');
+            const shareResponse = await fetch(`${umamiConfig.baseUrl}/api/share/${umamiConfig.shareId}`);
             if (!shareResponse.ok) {
                 throw new Error('获取分享信息失败');
             }
@@ -112,7 +117,7 @@ const { remarkPluginFrontmatter } = await entry.render();
             
             // 第二步：获取统计数据
             const currentTimestamp = Date.now();
-            const statsUrl = `https://us.umami.is/api/websites/${websiteId}/stats?startAt=0&endAt=${currentTimestamp}&unit=hour&timezone=Asia%2FShanghai&url=%2Fposts%2F${slug}%2F&compare=false`;
+            const statsUrl = `${umamiConfig.baseUrl}/api/websites/${websiteId}/stats?startAt=0&endAt=${currentTimestamp}&unit=hour&timezone=${encodeURIComponent(umamiConfig.timezone)}&url=%2Fposts%2F${slug}%2F&compare=false`;
             
             const statsResponse = await fetch(statsUrl, {
                 headers: {

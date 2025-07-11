@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import { profileConfig } from "../../config";
+import { profileConfig, umamiConfig } from "../../config";
 import { url } from "../../utils/url-utils";
 import ImageWrapper from "../misc/ImageWrapper.astro";
 
@@ -45,12 +45,16 @@ const config = profileConfig;
     </div>
 </div>
 
-<script>
+<script define:vars={{ umamiConfig }}>
     // 获取全站访问量统计
     async function loadSiteStats() {
+        if (!umamiConfig.enable) {
+            return;
+        }
+        
         try {
             // 第一步：获取网站ID和token
-            const shareResponse = await fetch('https://us.umami.is/api/share/7PoDRgCzHFTs2vWB');
+            const shareResponse = await fetch(`${umamiConfig.baseUrl}/api/share/${umamiConfig.shareId}`);
             if (!shareResponse.ok) {
                 throw new Error('获取分享信息失败');
             }
@@ -59,7 +63,7 @@ const config = profileConfig;
             
             // 第二步：获取全站统计数据（不指定url参数获取全站数据）
             const currentTimestamp = Date.now();
-            const statsUrl = `https://us.umami.is/api/websites/${websiteId}/stats?startAt=0&endAt=${currentTimestamp}&unit=hour&timezone=Asia%2FShanghai&compare=false`;
+            const statsUrl = `${umamiConfig.baseUrl}/api/websites/${websiteId}/stats?startAt=0&endAt=${currentTimestamp}&unit=hour&timezone=${encodeURIComponent(umamiConfig.timezone)}&compare=false`;
             
             const statsResponse = await fetch(statsUrl, {
                  headers: {

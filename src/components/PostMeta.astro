@@ -2,8 +2,9 @@
 import { Icon } from "astro-icon/components";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
+import { getDir, url } from "../utils/url-utils";
 import { formatDateToYYYYMMDD } from "../utils/date-utils";
-import { url } from "../utils/url-utils";
+import { umamiConfig } from "../config";
 
 interface Props {
 	class: string;
@@ -94,12 +95,16 @@ const className = Astro.props.class;
 </div>
 
 {slug && (
-    <script define:vars={{ slug }}>
+    <script define:vars={{ slug, umamiConfig }}>
         // 获取访问量统计
         async function fetchPageViews() {
+            if (!umamiConfig.enable) {
+                return;
+            }
+            
             try {
                 // 第一步：获取网站ID和token
-                const shareResponse = await fetch('https://us.umami.is/api/share/7PoDRgCzHFTs2vWB');
+                const shareResponse = await fetch(`${umamiConfig.baseUrl}/api/share/${umamiConfig.shareId}`);
                 if (!shareResponse.ok) {
                     throw new Error('获取分享信息失败');
                 }
@@ -108,7 +113,7 @@ const className = Astro.props.class;
                 
                 // 第二步：获取统计数据
                 const currentTimestamp = Date.now();
-                const statsUrl = `https://us.umami.is/api/websites/${websiteId}/stats?startAt=0&endAt=${currentTimestamp}&unit=hour&timezone=Asia%2FShanghai&url=%2Fposts%2F${slug}%2F&compare=false`;
+                const statsUrl = `${umamiConfig.baseUrl}/api/websites/${websiteId}/stats?startAt=0&endAt=${currentTimestamp}&unit=hour&timezone=${encodeURIComponent(umamiConfig.timezone)}&url=%2Fposts%2F${slug}%2F&compare=false`;
                 
                 const statsResponse = await fetch(statsUrl, {
                     headers: {

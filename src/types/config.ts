@@ -76,6 +76,13 @@ export type ImageFallbackConfig = {
 	fallbackDomain: string;
 };
 
+export type UmamiConfig = {
+	enable: boolean;
+	baseUrl: string;
+	shareId: string;
+	timezone: string;
+};
+
 export type LIGHT_DARK_MODE =
 	| typeof LIGHT_MODE
 	| typeof DARK_MODE

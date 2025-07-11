@@ -4,6 +4,7 @@ import type {
 	NavBarConfig,
 	ProfileConfig,
 	SiteConfig,
+	UmamiConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
 
@@ -241,4 +242,11 @@ export const imageFallbackConfig: ImageFallbackConfig = {
 	enable: true,
 	originalDomain: "sb-r2.afo.im",
 	fallbackDomain: "pub-d433ca7edaa74994b3d7c40a7fd7d9ac.r2.dev",
+};
+
+export const umamiConfig: UmamiConfig = {
+	enable: true,
+	baseUrl: "https://us.umami.is",
+	shareId: "7PoDRgCzHFTs2vWB",
+	timezone: "Asia/Shanghai",
 };
