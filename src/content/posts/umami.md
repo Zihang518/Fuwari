@@ -68,3 +68,7 @@ lang: ''
 # 注意事项
 
 Umami Cloud对于免费用户限制3个站点
+
+免费版月事件数为10w，本人博客感觉不够用，已经自建了，教程可以看我b站，没有就是没发 ~~来拷打我~~
+
+![](https://sb-r2.afo.im/myblog/img/d574dbd5-f095-469a-9db6-da7fdfdc08c2.webp)
