@@ -4,7 +4,7 @@ description: Serverless服务有很多，静态托管就是重中之重，来看
 draft: false
 image: https://sb-r2.afo.im/fuwari-blog/img/2024-11-28-08-37-49-image.png
 lang: ''
-published: 2025-06-29
+published: 2025-07-14
 tags:
 - Vercel
 - Cloudflare
@@ -12,7 +12,7 @@ tags:
 - EdgeOne
 - Github
 - Render
-title: N款CDN服务商的优缺点比较
+title: N款CDN/静态托管服务商的优缺点比较
 ---
 
 # [Netlify](https://www.netlify.com)
