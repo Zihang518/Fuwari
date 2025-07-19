@@ -2,7 +2,7 @@
 title: 关于我折腾了一晚上 EdgeOne
 published: 2025-06-22
 description: '本来对EdgeOne不感兴趣的，但是后来被引诱说没备案可以用国内节点，虽然好像当事者是开玩笑但是节点速度真的不错'
-image: https://eo-r2.2x.nz/myblog/img/3a9096b2-cee8-448b-952a-d9f68cb01be6.webp
+image: https://r2.afo.im/myblog/img/3a9096b2-cee8-448b-952a-d9f68cb01be6.webp
 tags: [EdgeOne, 优选]
 category: '记录'
 draft: false 
@@ -29,19 +29,19 @@ lang: ''
 
 通过创建 `加速区域全球可用区（不含中国大陆）` 。会分配给你一个类似 `eo3-blog.afo.im.eo.dnse4.com` 这样的CNAME地址要求你做CNAME解析。IP很烂。**可以直接做优选。** 获取方式很简单，直接ITDOG PING `edgeone.ai` 找个最快的IP直接写A解析（貌似国内的也可以🤔），如图。**本人EdgeOne优选：** `eo.072103.xyz`
 
-![](https://eo-r2.2x.nz/myblog/img/42ff5956-d1db-4005-8d96-05fcf7eb76f0.webp)
+![](https://r2.afo.im/myblog/img/42ff5956-d1db-4005-8d96-05fcf7eb76f0.webp)
 
-![](https://eo-r2.2x.nz/myblog/img/5e49847b-568e-44e3-97d1-737359d6d9d7.webp)
+![](https://r2.afo.im/myblog/img/5e49847b-568e-44e3-97d1-737359d6d9d7.webp)
 
-![](https://eo-r2.2x.nz/myblog/img/45abf772-9757-4172-984f-d9b5a01ae1de.webp)
+![](https://r2.afo.im/myblog/img/45abf772-9757-4172-984f-d9b5a01ae1de.webp)
 
 因为这玩意是一个CDN，需要一个源站。如果你是静态站点可以用Cloudflare Page部署一个站，然后设置回源如下（注意回源Hosts头要填写源站域名，否则CF可能会报423 Locked *他妈的比腾讯云的418我是个茶壶规范多了😅*）
 
-![](https://eo-r2.2x.nz/myblog/img/2bb58f42-4d8d-4429-a412-ff256b41087d.webp)
+![](https://r2.afo.im/myblog/img/2bb58f42-4d8d-4429-a412-ff256b41087d.webp)
 
 最后开启SSL，结束，享受它吧
 
-![](https://eo-r2.2x.nz/myblog/img/3063dcd0-857d-4280-8ed2-21f4beddb69a.webp)
+![](https://r2.afo.im/myblog/img/3063dcd0-857d-4280-8ed2-21f4beddb69a.webp)
 
 # 关于EdgeOne Pages（新）
 
@@ -57,7 +57,7 @@ lang: ''
 
 默认时延情况，如图
 
-![](https://eo-r2.2x.nz/myblog/img/fcf64bcf-7121-4952-b7e1-1aac7b7fe33d.webp)
+![](https://r2.afo.im/myblog/img/fcf64bcf-7121-4952-b7e1-1aac7b7fe33d.webp)
 
 > 以下言论仅适用于**备案**用户
 

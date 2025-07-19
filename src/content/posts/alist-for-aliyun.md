@@ -2,7 +2,7 @@
 category: 教程
 description: 阿里云云函数 FC是一个弹性的计算平台，可托管多种服务。搭配AList的前后端分离部署，实现比VPS更低的价格，得到更好的体验
 draft: false
-image: https://eo-r2.2x.nz/myblog/img/47518d4403328a0fcb716f0e06fc7f608e6c65b7.webp
+image: https://r2.afo.im/myblog/img/47518d4403328a0fcb716f0e06fc7f608e6c65b7.webp
 lang: ''
 published: 2025-01-13
 tags:
@@ -36,7 +36,7 @@ title: 利用阿里云云函数 FC 搭建AList后端，每月仅需5毛！
 5. 函数名称填写AList，运行环境选择Debian 10或Debian 11，代码上传方式选择从文件夹上传代码，启动命令填写：**./alist server --data /mnt/AList**，监听端口填写5244
 6. 我们需要上传代码到函数，也就是AList的二进制文件，我们前往 https://github.com/AlistGo/alist/releases/latest 下载最新的Linux AMD64架构的二进制文件，也就是 **alist-linux-amd64.tar.gz**。将其解压，你会得到一个名为 **alist**的二进制文件，创建一个空文件夹将其放进去，然后上传这个文件夹到函数
 
-![image](https://eo-r2.2x.nz/myblog/img/QmdajYeRyt1u3BSmRdGx8uUHKamGDkwoRe4TmEFZsJsaqS.png)
+![image](https://r2.afo.im/myblog/img/QmdajYeRyt1u3BSmRdGx8uUHKamGDkwoRe4TmEFZsJsaqS.png)
 
 7. 然后点击左下角的创建
 
@@ -59,7 +59,7 @@ title: 利用阿里云云函数 FC 搭建AList后端，每月仅需5毛！
 # 疑难解答
 
 1. 如果出现正在加载储存：
-   ![9aa460cd2dc84e1debe43e9df2d342fc](https://eo-r2.2x.nz/myblog/img/QmZVewYnKwCJzcShnkGTTVZJiTSUUSQi9u6pZ5rXRDK3rK.png)
+   ![9aa460cd2dc84e1debe43e9df2d342fc](https://r2.afo.im/myblog/img/QmZVewYnKwCJzcShnkGTTVZJiTSUUSQi9u6pZ5rXRDK3rK.png)
    查看你的日志，是否有存储加载失败，如果有可以尝试：
    1. 反复重新部署，直到能进后台然后删除那些加载失败的存储
    2. https://github.com/AlistGo/alist/discussions/3976

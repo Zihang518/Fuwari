@@ -2,7 +2,7 @@
 category: 教程
 description: 使用SaaS、Worker以及各种奇技淫巧来让你的网站解析的IP进行分流优选，提高网站可用性和速度
 draft: false
-image: https://eo-r2.2x.nz/myblog/img/QmePpCr1YsDEBjm5f4TWc5FiEJtQp9ppzHqAuMTvvzEmyz.webp
+image: https://r2.afo.im/myblog/img/QmePpCr1YsDEBjm5f4TWc5FiEJtQp9ppzHqAuMTvvzEmyz.webp
 lang: ''
 published: 2025-06-24
 tags:
@@ -12,11 +12,11 @@ title: 试试Cloudflare IP优选！让Cloudflare在国内再也不是减速器�
 
 #### 未优选
 
-![QmZoinxZgAzu7Skh7BqsxmDQGU1sXtLLskJcyQuRAQNKww.webp](https://eo-r2.2x.nz/myblog/img/098f9ee71ae62603022e542878673e19bdcaf196.webp)
+![QmZoinxZgAzu7Skh7BqsxmDQGU1sXtLLskJcyQuRAQNKww.webp](https://r2.afo.im/myblog/img/098f9ee71ae62603022e542878673e19bdcaf196.webp)
 
 #### 已优选
 
-![QmaNVwAwSRvqdL5SrvWVCGCQqmacP3d62yoLxofGscNoKq.webp](https://eo-r2.2x.nz/myblog/img/e98ce10d846475aaec5cf73546d9b5caffefc4c0.webp)
+![QmaNVwAwSRvqdL5SrvWVCGCQqmacP3d62yoLxofGscNoKq.webp](https://r2.afo.im/myblog/img/e98ce10d846475aaec5cf73546d9b5caffefc4c0.webp)
 
 ---
 
@@ -123,11 +123,11 @@ function getProxyPrefix(hostname) {
 
 创建路由
 
-![](https://eo-r2.2x.nz/myblog/img/56752d54-26a5-46f1-a7d9-a782ad9874cb.webp)
+![](https://r2.afo.im/myblog/img/56752d54-26a5-46f1-a7d9-a782ad9874cb.webp)
 
 类似这样填写
 
-![](https://eo-r2.2x.nz/myblog/img/d025398c-39e3-4bd7-8d8f-2ce06a45007d.webp)
+![](https://r2.afo.im/myblog/img/d025398c-39e3-4bd7-8d8f-2ce06a45007d.webp)
 
 最后写一条DNS解析 `CNAME gitea.afo.im --> 社区优选域名，如 cf.090227.xyz` 即可
 
@@ -142,7 +142,7 @@ function getProxyPrefix(hostname) {
 ---
 
 1. 首先新建一个DNS解析，指向你的**源站**，**开启cf代理**
-   ![QmfBKgDe77SpkUpjGdmsxqwU2UabvrDAw4c3bgFiWkZCna.webp](https://eo-r2.2x.nz/myblog/img/c94c34ee262fb51fb5697226ae0df2d804bf76fe.webp)
+   ![QmfBKgDe77SpkUpjGdmsxqwU2UabvrDAw4c3bgFiWkZCna.webp](https://r2.afo.im/myblog/img/c94c34ee262fb51fb5697226ae0df2d804bf76fe.webp)
 
 2. 前往**辅助域名**的 SSL/TLS -> 自定义主机名。设置回退源为你刚才的DNS解析的域名（xlog.acofork.cn）
 
@@ -150,13 +150,13 @@ function getProxyPrefix(hostname) {
    
    如果你想要创建多个优选也就这样添加，一个自定义主机名对应一个自定义源服务器。如果你将源服务器设为默认，则源服务器是回退源指定的服务器，即 `xlog.acofork.cn` 
    
-   ![QmRYrwjeDMDQCj8G9RYkpjC3X4vpwE77wpNpbqKURwBber.webp](https://eo-r2.2x.nz/myblog/img/f6170f009c43f7c6bee4c2d29e2db7498fa1d0dc.webp)
+   ![QmRYrwjeDMDQCj8G9RYkpjC3X4vpwE77wpNpbqKURwBber.webp](https://r2.afo.im/myblog/img/f6170f009c43f7c6bee4c2d29e2db7498fa1d0dc.webp)
 
 4. 继续在你的辅助域名添加一条解析。CNAME到优选节点：cloudflare.182682.xyz，**不开启cf代理**
-   ![QmNwkMqDEkCGMu5jsgE6fj6qpupiqMrqqQtWeAmAJNJbC4.webp](https://eo-r2.2x.nz/myblog/img/4f9f727b0490e0b33d360a2363c1026003060b29.webp)
+   ![QmNwkMqDEkCGMu5jsgE6fj6qpupiqMrqqQtWeAmAJNJbC4.webp](https://r2.afo.im/myblog/img/4f9f727b0490e0b33d360a2363c1026003060b29.webp)
 
 5. 最后在你的主力域名添加解析。域名为之前在辅助域名的自定义主机名（onani.cn），目标为刚才的cdn.acofork.cn，**不开启cf代理**
-   ![QmeK3AZghae4J4LcJdbPMxBcmoNEeF3hXNBmtJaDki8HYt.webp](https://eo-r2.2x.nz/myblog/img/6f51cb2a42140a9bf364f88a5715291be616a254.webp)
+   ![QmeK3AZghae4J4LcJdbPMxBcmoNEeF3hXNBmtJaDki8HYt.webp](https://r2.afo.im/myblog/img/6f51cb2a42140a9bf364f88a5715291be616a254.webp)
 
 6. 优选完毕，尝试访问
 

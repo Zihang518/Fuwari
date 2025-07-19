@@ -2,7 +2,7 @@
 title: Reality协议的代理服务端搭建教程
 published: 2025-05-01
 description: 'Reality协议是目前最抗检测的一种代理协议'
-image: https://eo-r2.2x.nz/myblog/img/709453e8-3a6a-4e2c-8618-fcf542ee0d37.webp
+image: https://r2.afo.im/myblog/img/709453e8-3a6a-4e2c-8618-fcf542ee0d37.webp
 tags: [Reality]
 category: '教程'
 draft: false 
@@ -86,10 +86,10 @@ https://公网IP:面板端口/WebBasePath
 
 示例配置如图
 
-![](https://eo-r2.2x.nz/myblog/img/bea44337-b899-4b11-a314-4c67b6ec3f51.webp)
+![](https://r2.afo.im/myblog/img/bea44337-b899-4b11-a314-4c67b6ec3f51.webp)
 
 然后点击修改。保存这份入站配置
 
 接着点击ID左边的+，点击二维码图标，扫码即可导入配置，点击二维码即可复制配置至剪贴板
 
-![](https://eo-r2.2x.nz/myblog/img/ab538d71-351c-4e3d-aebf-d5b0c32fd4ac.webp)
+![](https://r2.afo.im/myblog/img/ab538d71-351c-4e3d-aebf-d5b0c32fd4ac.webp)

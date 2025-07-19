@@ -2,7 +2,7 @@
 category: 教程
 description: 使用Zerotier，Tailscale，Cloudflare Tunnel可以实现多种内网穿透，其中有适用于个人访问的，也有适用于公众访问的
 draft: false
-image: https://eo-r2.2x.nz/myblog/img/2024-10-28-17-00-25-image.webp
+image: https://r2.afo.im/myblog/img/2024-10-28-17-00-25-image.webp
 lang: ''
 published: 2024-10-28
 tags:
@@ -34,9 +34,9 @@ ping你的对端设备，如果延迟大于200ms或者经常丢包大概率就�
 
 # 前期准备
 
-路由器开启UPnP![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-08-00-image.webp)  
+路由器开启UPnP![](https://r2.afo.im/myblog/img/2024-10-28-17-08-00-image.webp)  
 
-关闭路由器的IPv4，IPv6防火墙 **（可选）**![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-09-19-image.webp)
+关闭路由器的IPv4，IPv6防火墙 **（可选）**![](https://r2.afo.im/myblog/img/2024-10-28-17-09-19-image.webp)
 
 # *使用Zerotier/Tailscale进行内网穿透*
 
@@ -46,29 +46,29 @@ ping你的对端设备，如果延迟大于200ms或者经常丢包大概率就�
 
 ## 创建Zerotier账号
 
-前往：[ZeroTier | Global Networking Solution for IoT, SD-WAN, and VPN](https://www.zerotier.com/)。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-12-51-image.webp)
+前往：[ZeroTier | Global Networking Solution for IoT, SD-WAN, and VPN](https://www.zerotier.com/)。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能![](https://r2.afo.im/myblog/img/2024-10-28-17-12-51-image.webp)
 
-选择 `Sign up`![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-13-06-image.webp)
+选择 `Sign up`![](https://r2.afo.im/myblog/img/2024-10-28-17-13-06-image.webp)
 
-如果你到了这个界面，请仍然选择`Sign up`![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-15-08-image.webp)
+如果你到了这个界面，请仍然选择`Sign up`![](https://r2.afo.im/myblog/img/2024-10-28-17-15-08-image.webp)
 
-![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-16-52-image.webp)
+![](https://r2.afo.im/myblog/img/2024-10-28-17-16-52-image.webp)
 
-账号创建完毕后，登录即可![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-17-47-image.webp)
+账号创建完毕后，登录即可![](https://r2.afo.im/myblog/img/2024-10-28-17-17-47-image.webp)
 
 ## 创建一个新的Zerotier网络组
 
 当你账号登录成功后，会自动跳转到这个页面，点击`Create A Network`。如果没有，请访问[ZeroTier Central](https://my.zerotier.com/)
 
-![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-20-24-image.webp)
+![](https://r2.afo.im/myblog/img/2024-10-28-17-20-24-image.webp)
 
-下面的列表会增加一个新的网络组，点击它![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-21-31-image.webp)
+下面的列表会增加一个新的网络组，点击它![](https://r2.afo.im/myblog/img/2024-10-28-17-21-31-image.webp)
 
 Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知道了你的`Network ID`尝试加入你的网络组也需要你进行验证
 
-![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-22-38-image.webp)
+![](https://r2.afo.im/myblog/img/2024-10-28-17-22-38-image.webp)
 
-复制这个`Network ID`![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-22-13-image.webp)
+复制这个`Network ID`![](https://r2.afo.im/myblog/img/2024-10-28-17-22-13-image.webp)
 
 ---
 
@@ -76,15 +76,15 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 ## Windows：
 
-前往[Download - ZeroTier](https://www.zerotier.com/download/)，下载exe安装文件![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-25-52-image.webp)
+前往[Download - ZeroTier](https://www.zerotier.com/download/)，下载exe安装文件![](https://r2.afo.im/myblog/img/2024-10-28-17-25-52-image.webp)
 
-打开Zerotier![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-27-20-image.webp)
+打开Zerotier![](https://r2.afo.im/myblog/img/2024-10-28-17-27-20-image.webp)
 
-查看右下角托盘，按照图片操作加入网络组![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-28-20-image.webp)![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-29-12-image.webp)![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-30-26-image.webp)
+查看右下角托盘，按照图片操作加入网络组![](https://r2.afo.im/myblog/img/2024-10-28-17-28-20-image.webp)![](https://r2.afo.im/myblog/img/2024-10-28-17-29-12-image.webp)![](https://r2.afo.im/myblog/img/2024-10-28-17-30-26-image.webp)
 
 这里可以查询到你的设备ID和你在这个网络组的IP
 
-![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-03-19-image.webp)
+![](https://r2.afo.im/myblog/img/2024-10-28-18-03-19-image.webp)
 
 **然后参考：[Zerotier授权设备](#zerotier授权设备)**
 
@@ -92,13 +92,13 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 通过SSH连接上你的Linux设备
 
-查看安装命令：[Download - ZeroTier](https://www.zerotier.com/download/)![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-38-19-image.webp)
+查看安装命令：[Download - ZeroTier](https://www.zerotier.com/download/)![](https://r2.afo.im/myblog/img/2024-10-28-17-38-19-image.webp)
 
 终端执行： `curl -s https://install.zerotier.com | sudo bash`
 
-看到这一行即安装完毕，后面那一串即你的设备ID：![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-39-23-image.webp)
+看到这一行即安装完毕，后面那一串即你的设备ID：![](https://r2.afo.im/myblog/img/2024-10-28-17-39-23-image.webp)
 
-加入网络：`sudo zerotier-cli join 你的Network ID`![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-42-01-image.webp)
+加入网络：`sudo zerotier-cli join 你的Network ID`![](https://r2.afo.im/myblog/img/2024-10-28-17-42-01-image.webp)
 
 **然后参考：[Zerotier授权设备](#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87)**
 
@@ -112,7 +112,7 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 如图操作
 
-![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-59-06-image.webp)![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-59-46-image.webp)
+![](https://r2.afo.im/myblog/img/2024-10-28-17-59-06-image.webp)![](https://r2.afo.im/myblog/img/2024-10-28-17-59-46-image.webp)
 
 **然后参考：[Zerotier授权设备](#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87)**
 
@@ -122,9 +122,9 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 前往Zerotier的网页控制台：[ZeroTier Central]([https://my.zerotier.com/](https://my.zerotier.com/))
 
-授权刚才加入的设备![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-31-51-image.webp)
+授权刚才加入的设备![](https://r2.afo.im/myblog/img/2024-10-28-17-31-51-image.webp)
 
-勾选然后保存![](https://eo-r2.2x.nz/myblog/img/2024-10-28-17-33-10-image.webp)
+勾选然后保存![](https://r2.afo.im/myblog/img/2024-10-28-17-33-10-image.webp)
 
 ---
 
@@ -132,9 +132,9 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 如果你同一个网络组里已经有两台以上的设备了，可以尝试ping一下测试连通性，请先确保两台设备不在同一个局域网（比如手机开流量，NAS用家里的无线网）
 
-IP可以在这里查看![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-02-00-image.webp)
+IP可以在这里查看![](https://r2.afo.im/myblog/img/2024-10-28-18-02-00-image.webp)
 
-ping测试：![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-07-13-image.webp)
+ping测试：![](https://r2.afo.im/myblog/img/2024-10-28-18-07-13-image.webp)
 
 ---
 
@@ -144,7 +144,7 @@ ping测试：![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-07-13-image.webp)
 
 前往：[Tailscale](https://login.tailscale.com/start)。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能
 
-选择任意一个登录方式![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-24-32-image.webp)
+选择任意一个登录方式![](https://r2.afo.im/myblog/img/2024-10-28-18-24-32-image.webp)
 
 账号创建完毕后，登录即可
 
@@ -156,13 +156,13 @@ ping测试：![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-07-13-image.webp)
 
 前往[Download · Tailscale](https://tailscale.com/download)，下载exe安装文件
 
-官方教程：![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-31-48-image.webp)
+官方教程：![](https://r2.afo.im/myblog/img/2024-10-28-18-31-48-image.webp)
 
 ## Linux（飞牛OS）：
 
 通过SSH连接上你的Linux设备
 
-查看安装命令：[Download · Tailscale](https://tailscale.com/download/linux)![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-32-58-image.webp)
+查看安装命令：[Download · Tailscale](https://tailscale.com/download/linux)![](https://r2.afo.im/myblog/img/2024-10-28-18-32-58-image.webp)
 
 终端执行： `curl -fsSL https://tailscale.com/install.sh | sh`
 
@@ -180,9 +180,9 @@ ping测试：![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-07-13-image.webp)
 
 ## Tailscale访问测试
 
-前往Tailscale的网页控制台：[Machines - Tailscale](https://login.tailscale.com/admin/machines)。可以查看到每个设备Tailscale分配的IP![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-26-58-image.webp)
+前往Tailscale的网页控制台：[Machines - Tailscale](https://login.tailscale.com/admin/machines)。可以查看到每个设备Tailscale分配的IP![](https://r2.afo.im/myblog/img/2024-10-28-18-26-58-image.webp)
 
-ping测试![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-41-45-image.webp)
+ping测试![](https://r2.afo.im/myblog/img/2024-10-28-18-41-45-image.webp)
 
 ---
 
@@ -194,7 +194,7 @@ ping测试![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-41-45-image.webp)
 
 进入[Cloudflare One](https://one.dash.cloudflare.com/)（需要绑定PayPal）
 
-如图操作，创建一个Tunnel![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-45-41-image.webp)![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-45-54-image.webp)![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-46-22-image.webp)
+如图操作，创建一个Tunnel![](https://r2.afo.im/myblog/img/2024-10-28-18-45-41-image.webp)![](https://r2.afo.im/myblog/img/2024-10-28-18-45-54-image.webp)![](https://r2.afo.im/myblog/img/2024-10-28-18-46-22-image.webp)
 
 ## Docker方式
 
@@ -202,13 +202,13 @@ ping测试![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-41-45-image.webp)
 
 复制如图的命令
 
-![](https://eo-r2.2x.nz/myblog/img/48e9c43eb5c0fb49cc5517687698e3d9d1e60220.webp)
+![](https://r2.afo.im/myblog/img/48e9c43eb5c0fb49cc5517687698e3d9d1e60220.webp)
 
-将其粘贴，并且复制后面的令牌![](https://eo-r2.2x.nz/myblog/img/a2e18519d3782d765d7293c7a3d21031c787d575.webp)
+将其粘贴，并且复制后面的令牌![](https://r2.afo.im/myblog/img/a2e18519d3782d765d7293c7a3d21031c787d575.webp)
 
-1Panel应用商店搜索`cloudflared`![](https://eo-r2.2x.nz/myblog/img/cf2eba61f0aaa7605240187e1c46f80a3954edfa.webp)
+1Panel应用商店搜索`cloudflared`![](https://r2.afo.im/myblog/img/cf2eba61f0aaa7605240187e1c46f80a3954edfa.webp)
 
-填入令牌![](https://eo-r2.2x.nz/myblog/img/6f661ffa778b2be2e108912d3d44d8b3301df6d6.webp)
+填入令牌![](https://r2.afo.im/myblog/img/6f661ffa778b2be2e108912d3d44d8b3301df6d6.webp)
 
 然后前往[查看IP](#查看cloudflared的ip)
 
@@ -216,7 +216,7 @@ ping测试![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-41-45-image.webp)
 
 复制底下的命令然后SSH连接到Linux（飞牛OS）在终端输入
 
-![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-46-49-image.webp)
+![](https://r2.afo.im/myblog/img/2024-10-28-18-46-49-image.webp)
 
 然后前往[查看IP](#%E6%9F%A5%E7%9C%8Bcloudflared%E7%9A%84ip)
 
@@ -249,17 +249,17 @@ root@n100-debian:~# ip a
 
 选择Debian，然后复制底下的命令，直接到终端执行
 
-![](https://eo-r2.2x.nz/myblog/img/2024-10-28-20-00-49-image.webp)
+![](https://r2.afo.im/myblog/img/2024-10-28-20-00-49-image.webp)
 
 如果你的环境无法连接上Github
 
 尝试手动下载：[https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb](https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb)
 
-然后将其通过SSH等方式传到Linux上，如图终端为MobaXterm![](https://eo-r2.2x.nz/myblog/img/2024-10-29-10-18-29-image.webp)
+然后将其通过SSH等方式传到Linux上，如图终端为MobaXterm![](https://r2.afo.im/myblog/img/2024-10-29-10-18-29-image.webp)
 
 然后使用：`dpkg -i cloudflared-linux-amd64.deb`安装这个软件包
 
-然后直接复制右边的命令到SSH终端执行![](https://eo-r2.2x.nz/myblog/img/2024-10-29-10-19-27-3dcfad6977bdecf80fc0366f257788e6.webp)
+然后直接复制右边的命令到SSH终端执行![](https://r2.afo.im/myblog/img/2024-10-29-10-19-27-3dcfad6977bdecf80fc0366f257788e6.webp)
 
 **然后前往[配置并访问Tunnel](#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel)**
 
@@ -269,7 +269,7 @@ root@n100-debian:~# ip a
 
 在终端执行：`pkg install cloudflared`
 
-选择`Debian`然后复制最右边的命令到终端执行![](https://eo-r2.2x.nz/myblog/img/2024-10-29-08-42-38-image.webp)
+选择`Debian`然后复制最右边的命令到终端执行![](https://r2.afo.im/myblog/img/2024-10-29-08-42-38-image.webp)
 如果你无法使用Termux自带的cloudflared，请尝试安装proot容器实现
 
 依次输入命令：
@@ -288,7 +288,7 @@ dpkg -i cloudflared-linux-amd64.deb
 
 然后直接复制右边的命令到SSH终端执行
 
-![](https://eo-r2.2x.nz/myblog/img/2024-10-29-08-42-38-image.webp)
+![](https://r2.afo.im/myblog/img/2024-10-29-08-42-38-image.webp)
 
 如果你无法通过令牌配置cloudflared，请参见[本地方式配置cloudflared](#本地方式)
 
@@ -304,9 +304,9 @@ dpkg -i cloudflared-linux-amd64.deb
 
 如图进入，创建一个HTTP隧道
 
-![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-49-21-image.webp)![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-49-44-image.webp)
+![](https://r2.afo.im/myblog/img/2024-10-28-18-49-21-image.webp)![](https://r2.afo.im/myblog/img/2024-10-28-18-49-44-image.webp)
 
-填写你的IP和端口，非Docker模式可以直接填写localhost![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-53-37-image.webp)
+填写你的IP和端口，非Docker模式可以直接填写localhost![](https://r2.afo.im/myblog/img/2024-10-28-18-53-37-image.webp)
 
 ## 本地方式
 
@@ -318,7 +318,7 @@ dpkg -i cloudflared-linux-amd64.deb
 
 ## 访问测试
 
-成功访问![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-54-42-image.webp)
+成功访问![](https://r2.afo.im/myblog/img/2024-10-28-18-54-42-image.webp)
 
 # 使用STUN打洞
 
@@ -328,4 +328,4 @@ dpkg -i cloudflared-linux-amd64.deb
 
 执行：`curl -o /tmp/install.sh http://6.666666.host:6/files/golucky.sh && sh /tmp/install.sh http://6.666666.host:6/files 2.13.4`
 
-通过`host:16601` 进入Lucky后台，设置STUN穿透。如果DMZ主机不设为Lucky主机可能会失败。打码的地方即公网访问的IP和端口![](https://eo-r2.2x.nz/myblog/img/2024-10-28-18-56-16-image.webp)
+通过`host:16601` 进入Lucky后台，设置STUN穿透。如果DMZ主机不设为Lucky主机可能会失败。打码的地方即公网访问的IP和端口![](https://r2.afo.im/myblog/img/2024-10-28-18-56-16-image.webp)

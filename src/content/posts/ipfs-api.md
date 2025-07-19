@@ -2,7 +2,7 @@
 title: 分享一个IPFS图片API
 published: 2025-07-04
 description: '很早前我就用过xLog，这次逆向出了它的图床API，可以用来暂时存放图片！'
-image: https://eo-r2.2x.nz/myblog/img/2a104c9e-195b-4f16-b080-ee76c763a80a.webp
+image: https://r2.afo.im/myblog/img/2a104c9e-195b-4f16-b080-ee76c763a80a.webp
 tags: [IPFS]
 category: '记录'
 draft: false 
@@ -42,4 +42,4 @@ curl --location 'https://ipfs-relay.crossbell.io/upload' \
 
 其中， `web2url` 就是可以直接访问的URL，无CORS限制
 
-![](https://eo-r2.2x.nz/myblog/img/Qmb7hj9NHf9XdSZQ2dsqcSUpdrTuhjbpKJsTqG84X7rFqw.png)
+![](https://r2.afo.im/myblog/img/Qmb7hj9NHf9XdSZQ2dsqcSUpdrTuhjbpKJsTqG84X7rFqw.png)
