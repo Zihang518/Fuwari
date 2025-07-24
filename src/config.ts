@@ -9,10 +9,10 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "AcoFork Blog",
-	subtitle: "❤",
+	title: "二叉树树的博客",
+	// subtitle: "❤",
 	description:
-		"分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验的个人技术博客，专注于云原生、无服务器架构和前后端开发，作者为AcoFork/二叉树树",
+		"分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验的个人技术博客，专注于云原生、无服务器架构和前后端开发，作者为afoim/二叉树树",
 
 	keywords: [
 		// 核心技术领域
@@ -36,8 +36,7 @@ export const siteConfig: SiteConfig = {
 		"Blog",
 		"博客",
 		"afoim",
-		"AcoFork",
-		"AcoFork Blog",
+		"afoim Blog",
 		"二叉树树",
 		"二叉树树的博客",
 
@@ -222,8 +221,8 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
 	avatar: "https://q2.qlogo.cn/headimg_dl?dst_uin=2726730791&spec=5", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "AcoFork",
-	bio: "Protect What You Love!",
+	name: "二叉树树",
+	bio: "爱你所爱~ ❤",
 	links: [
 		{
 			name: "Bilibli",

@@ -172,9 +172,9 @@ title: Fuwari静态博客搭建教程
            url: 'https://qm.qq.com/q/Uy9kmDXHYO',
          },
          {
-           name: 'QQ',
+           name: 'Email',
            icon: 'fa6-solid:envelope',
-           url: 'mailto:acofork@foxmail.com',
+           url: 'mailto:email@example.com',
          },
        ],
      }
