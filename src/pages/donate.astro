@@ -140,8 +140,27 @@ import { Icon } from "astro-icon/components";
 
             </p>
             <br>
-            
             <div class="sponsors-grid">
+                <div class="sponsor-card">
+                    <div class="flex items-center gap-3 p-4 rounded-lg bg-[var(--card-bg)] border border-black/10 dark:border-white/10">
+                        <!-- 本地头像示例（需要将头像放在 public/avatars/ 目录下） -->
+                        <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center overflow-hidden">
+                            <!-- 如果有本地头像文件，使用: <img src="/avatars/user1.jpg" alt="用户头像" class="w-full h-full object-cover" /> -->
+                            <!-- 如果没有头像文件，显示默认图标 -->
+                            <!-- <Icon name="material-symbols:person" class="text-gray-500 dark:text-gray-400 text-[1.2rem]"/> -->
+                             <img src="/favicon/mjt.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-black dark:text-white text-sm">明镜台</h4>
+                            <p class="text-xs text-black/60 dark:text-white/60">2025-08-02</p>
+                        </div>
+                        <div class="text-xs text-[var(--primary)] font-medium">
+                            100 ￥
+                        </div>
+                    </div>
+                </div>
+            
+
                 <div class="sponsor-card">
                     <div class="flex items-center gap-3 p-4 rounded-lg bg-[var(--card-bg)] border border-black/10 dark:border-white/10">
                         <!-- 本地头像示例（需要将头像放在 public/avatars/ 目录下） -->
