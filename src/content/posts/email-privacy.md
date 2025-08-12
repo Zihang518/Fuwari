@@ -7,6 +7,8 @@ image: "https://fastr2.497995.xyz/fuwari/image/5fd0835b-93da-4edc-bde5-f0c8aaa24
 tags: ["fuwari优化"]
 ---
 
+> 本文非站长原创，由 https://github.com/afoim/fuwari/pull/31 提供
+
 ## 背景
 
 在网页上直接暴露电子邮件地址，会使其极易受到垃圾邮件机器人的自动抓取。为了解决这一隐私和安全问题，可以采用邮件地址混淆技术。
@@ -48,5 +50,6 @@ markdown: {
 ## 结论
 
 集成 `rehype-email-protection` 插件是一种简单而有效的隐私增强手段。它以极低的配置成本，显著降低了因在公开网页上暴露电子邮件地址而导致的安全风险，是静态网站开发中值得推荐的一个实践。
+
 
 引流：www.497995.xyz 树树放过我😭😭
