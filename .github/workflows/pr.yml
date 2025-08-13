@@ -1,0 +1,58 @@
+name: PR Preview Deploy
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 拉取 PR 分支代码（支持 fork）
+      - name: Checkout PR code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      # 2. 安装 pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      # 3. 安装依赖
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # 4. 构建站点
+      - name: Build site
+        run: pnpm build  # 构建产物目录确保是 ./dist 或自行修改
+
+      # 5. 安装 Wrangler CLI
+      - name: Install Wrangler CLI
+        run: pnpm add -g wrangler
+
+      # 6. 部署到 Cloudflare Pages
+      - name: Deploy to Cloudflare Pages
+        run: |
+          BRANCH_NAME=pr-${{ github.event.pull_request.number }}
+          wrangler pages deploy ./dist \
+            --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} \
+            --branch=$BRANCH_NAME \
+            --account-id=${{ secrets.CLOUDFLARE_ACCOUNT_ID }} \
+            --api-token=${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      # 7. 在 PR 评论区贴出预览链接
+      - name: Comment Preview URL
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const previewUrl = `https://${{ secrets.CLOUDFLARE_PROJECT_NAME }}--pr-${prNumber}.pages.dev`;
+            github.rest.issues.createComment({
+              issue_number: prNumber,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `✅ 预览已部署: ${previewUrl}`
+            });
