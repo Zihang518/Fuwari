@@ -10,6 +10,10 @@ description: 关于如何联系二叉树树~
 
 # 官方群
 
+## Misskey
+
+https://mk.2x.nz/
+
 ## Telegram群组
 
 [Telegram: Join Group Chat [2x.nz]](https://t.me/+_07DERp7k1ljYTc1)
