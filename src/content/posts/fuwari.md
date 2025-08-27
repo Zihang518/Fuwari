@@ -14,7 +14,7 @@ title: Fuwari静态博客搭建教程
 
 1. 一个牛逼的脑子，支持并行运算至少两个单位以上的事件。遇到问题先思考，想不通就搜索，搜索不到就去和AI调情，不要上来就问问问
 
-2. [Git - Downloads (git-scm.com)](https://git-scm.com/downloads)：最牛逼的版本控制器，这里用于对Github进行操作，当然，你也可以尝试使用[GitHub Desktop | Simple collaboration from your desktop](https://github.com/apps/desktop)但就我而言，这玩意更难用
+2. [Git - Downloads (git-scm.com)](https://git-scm.com/downloads)：最牛逼的版本控制器，这里用于对Github进行操作，当然，你也可以尝试使用[GitHub Desktop | Simple collaboration from your desktop](https://github.com/apps/desktop) ~~但就我而言，这玩意更难用~~ 在现在SSH克隆默认被阻断的情况下，它变得好用起来了
 
 3. [Node.js — Run JavaScript Everywhere (nodejs.org)](https://nodejs.org/en)：Fuwari基于Node.js，你需要安装这个来搭建博客
 
