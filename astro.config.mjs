@@ -19,7 +19,7 @@ import rehypeImageFallback from "./src/plugins/rehype-image-fallback.mjs";
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
-
+import rehypeExternalLinks from 'rehype-external-links';
 import expressiveCode from "astro-expressive-code";
 import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
@@ -128,6 +128,12 @@ export default defineConfig({
                     },
                 },
             ],
+			[
+				rehypeExternalLinks,
+				{
+				target: '_blank',
+				},
+			],
             [
                 rehypeAutolinkHeadings,
                 {
