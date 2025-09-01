@@ -30,4 +30,4 @@ export default defineConfig({
 
 有的小伙伴就会问了，如果我的Astro输出模式为SSG？那Astro的重定向是不是不支持 `location` 重定向？仅支持 `HTML` 重定向？
 
-的确，在不对构建服务商进行额外配置的情况下，Astro会使用兼容模式，创建 `HTML` 重定向，你可以尝试安装适配器来支持重定向，但需要注意 **并不是所有适配器都会透传Astro中设置的重定向规则** ，始终建议使用您构建服务商提供的重定向服务，参见： [配置 Vercel.json 以支持服务器级别的重定向](/posts/redirects/)。如配置 `vercel.json` 。关于 Astro 适配器的更多信息，参见 [配置参考 | Docs](https://docs.astro.build/zh-cn/reference/configuration-reference/#adapter)
+的确，在不对构建服务商进行额外配置的情况下，Astro会使用兼容模式，创建 `HTML` 重定向，你可以尝试安装适配器来支持重定向，但需要注意 **并不是所有适配器都会透传Astro中设置的重定向规则** ，始终建议使用您构建服务商提供的重定向服务，参见： [配置 Vercel.json 以支持服务器级别的重定向](/posts/vercel-redirects/)。如配置 `vercel.json` 。关于 Astro 适配器的更多信息，参见 [配置参考 | Docs](https://docs.astro.build/zh-cn/reference/configuration-reference/#adapter)
