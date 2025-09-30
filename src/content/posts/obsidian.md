@@ -14,6 +14,7 @@ lang: ""
 前往 [Download - Obsidian](https://obsidian.md/download) 下载对应你系统版本的软件。安装界面就可以选择语言为 **简体中文**
 # 初次上手
 Obsidian（下文简称“黑曜石”）将每一个存放了多个MarkDown文件的文件夹都叫做 **仓库** 
+
 首先，点击左下角的 **Obsidian  Vault** 
 ![](../assets/images/obsidian-1.png)
 然后点击 **管理仓库** ，然后根据你所需要的情况进行选择
