@@ -307,3 +307,8 @@ apt install s-tui
 
 - 1Panel Docker监控：https://status.1panel.top/status/docker
 - 南京大学GHCR镜像源：https://ghcr.nju.edu.cn
+
+---
+
+# 安徽财贸职业学院教务学生正确入口（课表导入）
+https://authserver.afc.edu.cn/authserver/login
