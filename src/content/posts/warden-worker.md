@@ -28,7 +28,7 @@ lang: ""
 点击创建令牌
 ![](../assets/images/warden-worker-4.png)
 
-选择 编辑Cloudflare Workers 并添加 **编辑D1数据库** 
+选择 编辑Cloudflare Workers
 ![](../assets/images/warden-worker-5.png)
 
 创建后 **复制API 令牌** （只会展示一次）（CLOUDFLARE_API_TOKEN）
@@ -46,7 +46,7 @@ lang: ""
 
 这里我Fork并二改了一个我的版本，跟着我的步骤走，包你成功！
 
-Fork我的仓库（别忘了点个 **Star** ） [afoim/warden-worker: A Bitwarden-compatible server for Cloudflare Workers](https://github.com/afoim/warden-worker/) **目前部署方式有大的改动，建议参照README** 
+Fork我的仓库（别忘了点个 **Star** ） [afoim/warden-worker: A Bitwarden-compatible server for Cloudflare Workers](https://github.com/afoim/warden-worker/)
 
 在仓库设置中添加上述三个机密环境变量
 - `CLOUDFLARE_ACCOUNT_ID`
