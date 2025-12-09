@@ -4,7 +4,6 @@ import type { MarkdownHeading } from "astro";
 import Profile from "./Profile.astro";
 import Tag from "./Tags.astro";
 import DomainSwitcher from "./DomainSwitcher.astro";
-import Inspiration from "./Inspiration.astro";
 
 interface Props {
 	class?: string;
@@ -20,7 +19,6 @@ const className = Astro.props.class;
     <div id="sidebar-sticky" class="transition-all duration-700 flex flex-col w-full gap-4 top-4 sticky top-4">
         <DomainSwitcher class="onload-animation" style="animation-delay: 150ms"></DomainSwitcher>
         <Tag class="onload-animation" style="animation-delay: 200ms"></Tag>
-        <Inspiration class="onload-animation" style="animation-delay: 250ms"></Inspiration>
         <!-- 赞助标 -->
         <div class="overflow-hidden flex justify-center">
             <a href="https://secbit.ai/" target="_blank" rel="noopener noreferrer">
