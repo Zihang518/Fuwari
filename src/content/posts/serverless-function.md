@@ -52,7 +52,7 @@ Serverless也比Server更容易做版本控制和Debug，由于Serverless和Git�
 
 用量限制非常宽松，并且可以超过限制的 **2倍** 以上仍保持正常访问
 ![](../assets/images/serverless-function-1.png)
-示例服务： [来！让我们用Vercel来分享你的OneDrive！ - AcoFork Blog](https://blog.2b2x.cn/posts/onedrive-index/)
+示例服务： [来！让我们用Vercel来分享你的OneDrive！ - AcoFork Blog](/posts/onedrive-index/)
 
 ### [Netlify Functions](https://www.netlify.com/platform/core/functions/)
 支持 JS/TS 和 Go。用量限制更宽松！仅限制每个月100G传输流量，但是一旦超限，即刻宕机
