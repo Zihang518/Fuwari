@@ -2,7 +2,7 @@
 category: 记录
 description: 一些记录，不定时更新
 draft: false
-image: /random/h
+image: https://cf-img.acofork.com/h
 lang: zh_CN
 published: 1999-01-01
 tags:
