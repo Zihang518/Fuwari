@@ -93,7 +93,7 @@ export function setHideBg(hide: boolean): void {
 	localStorage.setItem("hide-bg", String(hide));
 	const bgBox = document.getElementById("bg-box");
 	if (bgBox) {
-		bgBox.style.setProperty("display", hide ? "none" : "");
+		bgBox.style.setProperty("opacity", hide ? "0" : "");
 	}
 }
 
