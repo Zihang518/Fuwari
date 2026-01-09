@@ -14,7 +14,7 @@ import rehypeExternalLinks from "rehype-external-links";
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive"; /* Handle directives */
-import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
+import { remarkGithubAdmonitions } from "./src/plugins/remark-github-admonitions.js";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
 import { imageFallbackConfig, siteConfig } from "./src/config.ts";
@@ -122,7 +122,7 @@ export default defineConfig({
 			remarkMath,
 			remarkReadingTime,
 			remarkExcerpt,
-			remarkGithubAdmonitionsToDirectives,
+			remarkGithubAdmonitions,
 			remarkDirective,
 			remarkSectionize,
 			parseDirectiveNode,
