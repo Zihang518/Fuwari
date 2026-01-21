@@ -115,6 +115,11 @@ export const profileConfig: ProfileConfig = {
 			url: "https://space.bilibili.com/325903362",
 		},
 		{
+			name: "Folo",
+			icon: "fa6-brands:folo",
+			url: "https://app.folo.is/share/feeds/236818461447222272",
+		},
+		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
 			url: "https://github.com/afoim",
