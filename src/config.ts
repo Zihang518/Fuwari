@@ -101,28 +101,28 @@ export const profileConfig: ProfileConfig = {
 	links: [
 		{
 			name: "QQ",
-			icon: "fa6-brands:qq",
+			icon: "qq", // Local icon
 			url: "https://qm.qq.com/q/FWqOHlwL2m",
 		},
 		{
 			name: "Telegram",
-			icon: "fa6-brands:telegram",
+			icon: "telegram", // Local icon
 			url: "https://t.me/+_07DERp7k1ljYTc1",
 		},
 		{
 			name: "Bilibli",
-			icon: "fa6-brands:bilibili",
+			icon: "bilibili", // Local icon
 			url: "https://space.bilibili.com/325903362",
 		},
 		{
-			name: "Folo",
-			icon: "fa6-brands:folo",
-			url: "https://app.folo.is/share/feeds/236818461447222272",
+			name: "GitHub",
+			icon: "github", // Local icon
+			url: "https://github.com/afoim",
 		},
 		{
-			name: "GitHub",
-			icon: "fa6-brands:github",
-			url: "https://github.com/afoim",
+			name: "Folo",
+			icon: "folo", // Local icon
+			url: "https://app.folo.is/share/feeds/236818461447222272",
 		},
 	],
 };

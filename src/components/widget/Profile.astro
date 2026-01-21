@@ -1,8 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
 import { profileConfig, siteConfig, umamiConfig } from "../../config";
+import { getSortedPosts } from "@utils/content-utils";
 
 const config = profileConfig;
+const posts = await getSortedPosts();
+const totalPosts = posts.length;
+let totalWords = 0;
+for (const post of posts) {
+    const { remarkPluginFrontmatter } = await post.render();
+    if (remarkPluginFrontmatter && remarkPluginFrontmatter.words) {
+        totalWords += remarkPluginFrontmatter.words;
+    }
+}
+
 ---
 <div class="card-base p-3 border border-black/10 dark:border-white/10">
     <div class="relative mx-auto mt-1 lg:mx-0 lg:mt-0 mb-3 max-w-[12rem] lg:max-w-none rounded-xl overflow-hidden" style={`--theme-hue: ${siteConfig.themeColor.hue}`}>
@@ -25,6 +36,26 @@ const config = profileConfig;
             </a>}
         </div>
         
+        <!-- 全站文章与字数统计 -->
+        <div class="grid grid-cols-2 mt-3 pt-3 border-t border-neutral-300 dark:border-neutral-700">
+            <div class="text-center">
+                <div class="text-xs text-neutral-500 mb-1 flex items-center justify-center gap-1">
+                    <Icon name="material-symbols:article-outline" class="text-base"></Icon>
+                    <span class="text-xs">文章数</span>
+                </div>
+                <div class="font-bold text-lg text-neutral-700 dark:text-neutral-300">{totalPosts}</div>
+            </div>
+            <div class="text-center border-l border-neutral-300 dark:border-neutral-700">
+                <div class="text-xs text-neutral-500 mb-1 flex items-center justify-center gap-1">
+                    <Icon name="material-symbols:format-list-numbered" class="text-base"></Icon>
+                    <span class="text-xs">总字数</span>
+                </div>
+                <div class="font-bold text-lg text-neutral-700 dark:text-neutral-300">
+                    {(totalWords / 10000).toFixed(1)}w
+                </div>
+            </div>
+        </div>
+
         <!-- 全站访问量统计 -->
         <div class="grid grid-cols-2 mt-3 pt-3 border-t border-neutral-300 dark:border-neutral-700">
             <div class="text-center">

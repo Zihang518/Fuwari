@@ -61,9 +61,6 @@ importers:
       '@iconify-json/material-symbols':
         specifier: ^1.2.20
         version: 1.2.20
-      '@iconify-json/simple-icons':
-        specifier: ^1.2.42
-        version: 1.2.42
       '@iconify/svelte':
         specifier: ^4.2.0
         version: 4.2.0(svelte@5.28.2)
@@ -173,6 +170,9 @@ importers:
       '@iconify-json/material-symbols-light':
         specifier: ^1.2.49
         version: 1.2.49
+      '@iconify-json/simple-icons':
+        specifier: ^1.2.42
+        version: 1.2.42
       '@rollup/plugin-yaml':
         specifier: ^4.1.2
         version: 4.1.2(rollup@2.79.2)
@@ -8984,7 +8984,7 @@ snapshots:
 
   lightningcss@1.29.3:
     dependencies:
-      detect-libc: 2.0.4
+      detect-libc: 2.1.2
     optionalDependencies:
       lightningcss-darwin-arm64: 1.29.3
       lightningcss-darwin-x64: 1.29.3
