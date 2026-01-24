@@ -88,7 +88,7 @@ git add -A
 git rebase --continue
 ```
 
-这里会弹出一个修改Git提交的vim，直接关掉即可。 **ESC** + **:q** 
+这里会弹出一个修改Git提交的vim，直接关掉即可。 **ESC** + **\:q** 
 
 ![](../assets/images/del-git-commit-7.png)
 
