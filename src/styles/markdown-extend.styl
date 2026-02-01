@@ -74,6 +74,51 @@
   img
     border-radius: 0.75rem
 
+  table
+    width: 100%
+    margin: 1rem 0
+    border-collapse: separate
+    border-spacing: 0
+    border: 1px solid var(--line-divider)
+    border-radius: 0.75rem
+    overflow: hidden
+    background: var(--card-bg)
+
+  thead th
+    background: var(--btn-regular-bg)
+    font-weight: 600
+
+  th, td
+    padding: 0.75rem 0.9rem
+    text-align: center
+    vertical-align: middle
+    border-bottom: 1px solid var(--line-divider)
+
+  th:not(:last-child), td:not(:last-child)
+    border-right: 1px solid var(--line-divider)
+
+  tbody tr:last-child td
+    border-bottom: none
+
+  tbody tr:nth-child(2n)
+    background: var(--btn-plain-bg-hover)
+
+  tbody tr:hover td
+    background: var(--btn-card-bg-hover)
+
+  th > p, td > p
+    margin: 0
+
+  th > p:only-child, td > p:only-child
+    display: flex
+    justify-content: center
+    align-items: center
+
+  td img
+    display: block
+    margin-left: auto
+    margin-right: auto
+
   hr
     border-color: var(--line-divider)
     border-style: dashed
