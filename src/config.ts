@@ -14,7 +14,7 @@ import { LinkPreset } from "./types/config";
 export const noticeConfig: NoticeConfig = {
 	enable: true,
 	level: "happy",
-	content: "由于被博客被长期DDOS攻击，我们决定将博客所有域名，包括但不限于： acofork.com, 2b2x.cn, 0d.hk, 2x.nz 等，全部改为使用Cloudflare CDN提供服务。若有Bug请及时反馈，感谢各位一路以来的理解与支持。",
+	content: "由于博客被长期 DDOS 攻击，我们决定将博客所有域名，包括但不限于： acofork.com, 2b2x.cn, 0d.hk, 2x.nz 等，全部改为使用Cloudflare CDN提供服务。若有Bug请及时反馈，感谢各位一路以来的理解与支持。",
 };
 
 export const siteConfig: SiteConfig = {
