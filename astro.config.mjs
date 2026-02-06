@@ -82,7 +82,7 @@ export default defineConfig({
 		},
 		"/gal": {
 			status: 302,
-			destination: "https://i.2x.nz/posts/94",
+			destination: "/post/gal/",
 		},
 		"/ok": {
 			status: 302,
