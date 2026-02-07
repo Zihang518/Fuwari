@@ -9,7 +9,24 @@ const __dirname = path.dirname(__filename);
 
 // Configuration
 const DATA_DIR = path.join(__dirname, '../src/data');
+const CONFIG_PATH = path.join(__dirname, '../astro.config.mjs');
 const TIMEOUT = 10000; // 10 seconds timeout
+
+// Helper to get site URL from config
+function getSiteUrl() {
+    try {
+        const configContent = fs.readFileSync(CONFIG_PATH, 'utf8');
+        const match = configContent.match(/site:\s*["']([^"']+)["']/);
+        if (match && match[1]) {
+            return match[1].replace(/\/$/, ''); // Remove trailing slash
+        }
+    } catch (err) {
+        console.error('Failed to read astro.config.mjs:', err.message);
+    }
+    return null;
+}
+
+const SITE_URL = getSiteUrl();
 
 // Colors for console output
 const colors = {
@@ -40,6 +57,21 @@ function checkUrl(url, redirectCount = 0) {
         if (redirectCount > 5) {
             resolve({ ok: false, status: 'Too many redirects', redirectCount });
             return;
+        }
+
+        // Handle local paths
+        if (url.startsWith('/')) {
+            if (!SITE_URL) {
+                resolve({ ok: false, status: 'No Site URL', redirectCount });
+                return;
+            }
+            url = SITE_URL + url;
+        }
+
+        // Invalid URL check
+        if (!url.startsWith('http')) {
+             resolve({ ok: false, status: 'Invalid URL', redirectCount });
+             return;
         }
 
         const client = url.startsWith('https') ? https : http;
@@ -111,10 +143,35 @@ async function processFile(filePath, type) {
             if (urlResult.ok) {
                 stats.success++;
             } else {
-                stats.failed++;
-                hasError = true;
-                stats.errors.push({ type, name, field: 'url', value: data.url, error: urlResult.status });
+                // If failed, and site URL is available, try prepending site URL if it wasn't a local path originally
+                // BUT only if it is NOT already a standard HTTP/HTTPS URL. If it is standard, don't retry with prefix.
+                if (!data.url.startsWith('/') && !data.url.startsWith('http') && SITE_URL) {
+                     const retryUrl = SITE_URL + '/' + data.url.replace(/^\/+/, '');
+                     const retryResult = await checkUrl(retryUrl);
+                     if (retryResult.ok) {
+                         urlResult = retryResult;
+                         stats.success++;
+                     } else {
+                         stats.failed++;
+                         hasError = true;
+                         stats.errors.push({ type, name, field: 'url', value: data.url, error: urlResult.status });
+                     }
+                } else {
+                    stats.failed++;
+                    hasError = true;
+                    stats.errors.push({ type, name, field: 'url', value: data.url, error: urlResult.status });
+                }
             }
+        }
+
+        // If URL check failed (and not just N/A), skip avatar check and return early
+        // BUT wait, requirements say "if url failed, directly exit". Assuming this means exit checking THIS item.
+        if (data.url && !urlResult.ok && urlResult.status !== 'N/A') {
+             // Print output for failed URL
+             let output = `${colors.cyan}${name}${colors.reset}：`;
+             output += `url：${colors.red}${urlResult.status}${colors.reset}`;
+             console.log(output);
+             return;
         }
 
         // Check Avatar
@@ -124,9 +181,23 @@ async function processFile(filePath, type) {
             if (avatarResult.ok) {
                 stats.success++;
             } else {
-                stats.failed++;
-                hasError = true;
-                stats.errors.push({ type, name, field: 'avatar', value: data.avatar, error: avatarResult.status });
+                  // Try fallback with site URL if it fails and doesn't start with http
+                  if (!data.avatar.startsWith('/') && !data.avatar.startsWith('http') && SITE_URL) {
+                      const retryUrl = SITE_URL + '/' + data.avatar.replace(/^\/+/, '');
+                      const retryResult = await checkUrl(retryUrl);
+                      if (retryResult.ok) {
+                          avatarResult = retryResult;
+                          stats.success++;
+                      } else {
+                          stats.failed++;
+                          hasError = true;
+                          stats.errors.push({ type, name, field: 'avatar', value: data.avatar, error: avatarResult.status });
+                      }
+                 } else {
+                     stats.failed++;
+                     hasError = true;
+                     stats.errors.push({ type, name, field: 'avatar', value: data.avatar, error: avatarResult.status });
+                 }
             }
         }
 
