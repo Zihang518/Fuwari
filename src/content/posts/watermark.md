@@ -6,6 +6,15 @@ image: ../assets/images/watermark.png
 draft: false
 lang: ""
 ---
+> [!CAUTION]
+> 2月4号的2xss你好呀
+> 
+> 你TM加几把水印呢，还不备份，还Drop并且强制推送远端，还TM给Github发邮件让他们GC
+> 
+> 你知道老子今天从 `.edgeone` `.astro` 里面找缓存的没水印的原图图片有多几把难吗
+> 
+> 你真的牛大了，给我桂霞！
+
 # 前言
 
 这是很早之前的事了，简单来说就是有人盗了我的这一篇文章： [关于我折腾了一晚上 EdgeOne - AcoFork Blog](https://acofork.com/posts/edgeone/)
