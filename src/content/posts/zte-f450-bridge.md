@@ -2,7 +2,7 @@
 title: ZTE光猫F450不拆机获取超密
 published: 2025-11-01T14:42:54
 description: 朋友老早之前就想将光猫改为桥接，今天终于整上了，但奈何没有超密，不过，在互联网的帮助下，我们最终找到了解决方案
-image: ../assets/images/zte-f450-bridge-4.png
+image: ../assets/images/zte-f450-bridge-4.webp
 tags:
   - 破解
 draft: false
@@ -40,12 +40,12 @@ lang: ""
 
 前往 [RouterPassView - 从 Windows 上的路由器备份文件中恢复丢失的密码](https://www.nirsoft.net/utils/router_password_recovery.html) 下载
 
-![](../assets/images/zte-f450-bridge.png)
-![](../assets/images/zte-f450-bridge-1.png)
+![](../assets/images/zte-f450-bridge.webp)
+![](../assets/images/zte-f450-bridge-1.webp)
 
 解压并使用 `RouterPassView` 打开 `db_user_cfg.xml` 
 
 搜索 `tele` ，寻找超密
 
-![](../assets/images/zte-f450-bridge-3.png)
+![](../assets/images/zte-f450-bridge-3.webp)
 

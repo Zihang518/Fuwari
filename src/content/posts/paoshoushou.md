@@ -2,7 +2,7 @@
 category: "Github"
 description: "[开源]刨手手表情包下载站"
 draft: false
-image: "https://imgbed.112601.xyz/file/1755431008556.png"
+image: "https://imgbed.112601.xyz/file/1755431008556.webp"
 lang: ""
 published: 2025-08-21
 tags:
@@ -14,7 +14,7 @@ title: "Ciallo～(∠・ω< )⌒★"
 
 # 刨手手表情包下载站  
 一个简单、美观、现代化的表情包预览和下载网站  [体验界面](https://paoshoushou.112601.xyz/)
-![示例](https://imgbed.112601.xyz/file/1755431008556.png)  
+![示例](https://imgbed.112601.xyz/file/1755431008556.webp)  
 [项目主页文章（博客）](#) | [体验界面](https://paoshoushou.112601.xyz/) | [GitHub仓库](https://github.com/yunsen2025/paoshoushouGIF-web)
 
 > [!NOTE]

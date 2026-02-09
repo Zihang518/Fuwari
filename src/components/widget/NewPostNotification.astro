@@ -471,13 +471,12 @@
                     // New post
                     detectedChanges.push({ ...post, isUpdated: false });
                 } else {
-                    // Check for ANY change (Title, Date, Description, Content)
+                    // Check for ANY change (Title, Description, Content)
                     const titleChanged = post.title !== stored.title;
-                    const dateChanged = post.pubDate !== stored.pubDate;
                     const descriptionChanged = post.description !== stored.description;
                     const contentChanged = post.content !== stored.content;
                     
-                    if (titleChanged || dateChanged || descriptionChanged || contentChanged) {
+                    if (titleChanged || descriptionChanged || contentChanged) {
                         // Calculate diff for content
                         let diff = null;
                         

@@ -2,7 +2,7 @@
 title: 让我们来看看图片防盗链各大厂做的怎么样！
 published: 2026-02-01T16:57:26
 description: 今天突发奇想就像试试抓抓各大厂的头像接口，没想到有挺多根本没有防盗链
-image: ../assets/images/avatar.png
+image: ../assets/images/avatar.webp
 draft: false
 lang: ""
 ---
@@ -19,25 +19,25 @@ lang: ""
 |                                                                    头像                                                                    | 描述  |
 | :--: | :-: |
 |  <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=2726730791&spec=0" width="50" height="100"> | QQ  |
-| <img src="https://ocs-cn-north1.heytapcs.com/titans-usercenter-avatar-bucket-cn/vf/q7/7c/vfq77cwaxzzwzzaky7rkgiear4000000_1755101257605_s.jpg" width="50" height="100"> |   OPPO（Web）  |
+| <img src="https://ocs-cn-north1.heytapcs.com/titans-usercenter-avatar-bucket-cn/vf/q7/7c/vfq77cwaxzzwzzaky7rkgiear4000000_1755101257605_s.webp" width="50" height="100"> |   OPPO（Web）  |
 | <img src="https://lh3.googleusercontent.com/a/ACg8ocLIJXR_N2wuwp93PorzuRum2GhcH7J2dO-OZUyDhMbB-AR_wbp6GM2cl7wWM6g2R8wddRd6SCJDWbRFKoenroJnx3eVdHE=s288-c-no" width="50" height="100"> |   Google（Web）  |
-| <img src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/eUlnezeXgqmLGraD2sQ90d-x-vk-cd104cbc_320.jpg" width="50" height="100"> |   小米（Web）  |
-| <img src="http://storage.360buyimg.com/default.image/6a645f6465665f696d675f393836323031373632333134353936313533_big.jpg" width="50" height="100"> |   京东（Web）  |
-| <img src="https://aos-cdn-image.amap.com/pp/avatar/bb8/e4/0e/277600933.jpg?ver=1717735051&imgoss=1" width="50" height="100"> |   高德地图（Web）  |
-| <img src="http://img.meituan.net/avatar/0c3440bf16903eeba85fe9965bcdc66115409.jpg%40132w_132h_1e_1l.webp" width="50" height="100"> |   美团  |
-| <img src="https://img.alicdn.com/sns_logo/TB1e4rMt8Bh1e4jSZFhXXcC9VXa-240-240.png_320x320q95.jpg" width="50" height="100"> |   淘宝  |
+| <img src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/eUlnezeXgqmLGraD2sQ90d-x-vk-cd104cbc_320.webp" width="50" height="100"> |   小米（Web）  |
+| <img src="http://storage.360buyimg.com/default.image/6a645f6465665f696d675f393836323031373632333134353936313533_big.webp" width="50" height="100"> |   京东（Web）  |
+| <img src="https://aos-cdn-image.amap.com/pp/avatar/bb8/e4/0e/277600933.webp?ver=1717735051&imgoss=1" width="50" height="100"> |   高德地图（Web）  |
+| <img src="http://img.meituan.net/avatar/0c3440bf16903eeba85fe9965bcdc66115409.webp%40132w_132h_1e_1l.webp" width="50" height="100"> |   美团  |
+| <img src="https://img.alicdn.com/sns_logo/TB1e4rMt8Bh1e4jSZFhXXcC9VXa-240-240.webp_320x320q95.webp" width="50" height="100"> |   淘宝  |
 | <img src="http://avatar3-3.pddpic.com/a/Q0FvYVZ2SDFGRkJQTFpTMUlTaHRIN1d4MDI3QUNhWWt3UT09djA0-1706852575?imageMogr2/thumbnail/100x" width="50" height="100"> |   拼多多  |
 | <img src="https://avatars.githubusercontent.com/u/180811437?s=400&u=e785f90ecf2021cc754f9e705c171389f17a204e&v=4" width="50" height="100"> |   GitHub（Web）  |
-| <img src="https://cdn5.telesco.pe/file/eEJesgiw8Vk2I9TP-d0xawWucIlC-204T6Ghy1LGLLmNUuajtFbh5eX1iL3fEao2jnjI92dpXAkyOSOiWIjhNbdWQ7PVKdFKCIUF-FqF8S0O27QcHFxrEMcTH-Ajpe-iX55sjjNvZC6IaHbEXjcVxBvF0fMjNb4BIYzW_KVVVsD0bG1H_rkf89rlPTePCUFySDdtFx7QYegbtoruOUcCuqt00qcozFIMynAi5NLGbtkTfRcUq3nJ2-7g9SGPpPI1U5MQPwjIR_c2p1dTiveR5q-9fx5rMk4IM_pOBRnjNAkJGm7fjNQQzanfgz5QK6kQ8VgPRHC2Ny-0gifoklRY7A.jpg" width="50" height="100"> |   Telegram（Web）  |
+| <img src="https://cdn5.telesco.pe/file/eEJesgiw8Vk2I9TP-d0xawWucIlC-204T6Ghy1LGLLmNUuajtFbh5eX1iL3fEao2jnjI92dpXAkyOSOiWIjhNbdWQ7PVKdFKCIUF-FqF8S0O27QcHFxrEMcTH-Ajpe-iX55sjjNvZC6IaHbEXjcVxBvF0fMjNb4BIYzW_KVVVsD0bG1H_rkf89rlPTePCUFySDdtFx7QYegbtoruOUcCuqt00qcozFIMynAi5NLGbtkTfRcUq3nJ2-7g9SGPpPI1U5MQPwjIR_c2p1dTiveR5q-9fx5rMk4IM_pOBRnjNAkJGm7fjNQQzanfgz5QK6kQ8VgPRHC2Ny-0gifoklRY7A.webp" width="50" height="100"> |   Telegram（Web）  |
 | <img src="https://img.qwps.cn/315260194?imageMogr2/thumbnail/180x180!&k=1715912797563685102" width="50" height="100"> |   WPS（Web）  |
-| <img src="http://img.alicdn.com/bao/uploaded/i1/O1CN01Y71UwZ1Xr3hlLi79V_!!4611686018427385488-0-mtopupload.jpg" width="50" height="100"> |   闲鱼  |
+| <img src="http://img.alicdn.com/bao/uploaded/i1/O1CN01Y71UwZ1Xr3hlLi79V_!!4611686018427385488-0-mtopupload.webp" width="50" height="100"> |   闲鱼  |
 | <img src="https://imga.3839.com/117535?t=1765556642" width="50" height="100"> |   好游快爆  |
-| <img src="http://p3.music.126.net/MT4fcDQM_7eo7NLq9-Ge2A==/109951169275563698.jpg?param=30y30" width="50" height="100"> |   网易云音乐（Web）  |
-| <img src="https://img.kookapp.cn/attachments/2026-01/31/vknjuH7RiN0dw0dw.jpeg?x-oss-process=style/icon" width="50" height="100"> |   KOOK  |
-| <img src="https://img3-tc.tapimg.com/avatars/etag/FnKeVW2he8X1JwJ33XoFRG02eGVm.png/_tap_avatar_m.jpg" width="50" height="100"> |   TapTap（Web）  |
+| <img src="http://p3.music.126.net/MT4fcDQM_7eo7NLq9-Ge2A==/109951169275563698.webp?param=30y30" width="50" height="100"> |   网易云音乐（Web）  |
+| <img src="https://img.kookapp.cn/attachments/2026-01/31/vknjuH7RiN0dw0dw.webp?x-oss-process=style/icon" width="50" height="100"> |   KOOK  |
+| <img src="https://img3-tc.tapimg.com/avatars/etag/FnKeVW2he8X1JwJ33XoFRG02eGVm.webp/_tap_avatar_m.webp" width="50" height="100"> |   TapTap（Web）  |
 | <img src="http://wx.qlogo.cn/mmhead/OxUBpiaYgpHgv5ETJhoPFuS7H1d2vuYxvZwb5eia5G1jMAunabN4HLjREsrDUaolsxMX77UXpBzicQ/0" width="50" height="100"> |   （微信）公众号助手  |
-| <img src="https://himg.bdimg.com/sys/portrait/item/public.1.32f8f9b.Naa8uLkNmy_npPPyAuyi-A.jpg?1769944805341" width="50" height="100"> |   百度网盘  |
-| <img src="https://avatars.akamai.steamstatic.com/e603bd97da45790ad8bfb15648040f599c1aa52d.jpg" width="50" height="100"> |   Steam（Web）  |
+| <img src="https://himg.bdimg.com/sys/portrait/item/public.1.32f8f9b.Naa8uLkNmy_npPPyAuyi-A.webp?1769944805341" width="50" height="100"> |   百度网盘  |
+| <img src="https://avatars.akamai.steamstatic.com/e603bd97da45790ad8bfb15648040f599c1aa52d.webp" width="50" height="100"> |   Steam（Web）  |
 
 # 这表明了什么？
 对于图片，音乐，影片等静态资源，若直接使用 `img` `audio` `video` 等标签，无需CORS即可将远端资源在任意网页上展示。这是W3C规范的一部分，详情请参考 [HTML5 嵌入内容](https://www.w3.org/TR/2014/REC-html5-20141028/embedded-content-0.html?utm_source=chatgpt.com)
@@ -80,7 +80,7 @@ image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
 
 - Chromium（Edge/Chrome）
 > 另外提一嘴，Chromium 最近推了一个更新，导致CORS/CORP错误默认不显示在控制台，需要勾选 **显示控制台中的CORS错误** [控制台功能参考  |  Chrome DevTools  |  Chrome for Developers](https://developer.chrome.com/docs/devtools/console/reference?utm_source=chatgpt.com&hl=zh-cn#cors-errors)
-![](../assets/images/avatar-1.png)
+![](../assets/images/avatar-1.webp)
 
 - Firefox
-![](../assets/images/avatar-2.png)
+![](../assets/images/avatar-2.webp)

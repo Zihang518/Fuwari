@@ -156,7 +156,7 @@ const path = {
 		if (parts[0] === "") newParts.unshift("");
 		return newParts.join("/");
 	},
-	// returns the last part of a path, e.g. 'foo.jpg'
+	// returns the last part of a path, e.g. 'foo.webp'
 	basename(fullpath) {
 		const sp = fullpath.split("/");
 		return sp[sp.length - 1];

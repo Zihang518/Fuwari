@@ -2,7 +2,7 @@
 title: 上手米哈游AI，然后把它逆了！
 published: 2025-12-02T09:11:40
 description: AnuNeko是一只会哈气的橘猫...其实不是，AnuNeko是由米哈游创始人做的AI大模型，会哈气。于是便做个QQBot给群友玩
-image: ../assets/images/anuneko.png
+image: ../assets/images/anuneko.webp
 tags:
   - AnuNeko
   - NoneBot2
@@ -17,7 +17,7 @@ lang: ""
 
 # 逆！
 okok，注意到登陆后的请求头中有 `x-token` 字段
-![](../assets/images/anuneko-1.png)
+![](../assets/images/anuneko-1.webp)
 
 手搓个请求发发，`data` 携带内容 
 ```json
@@ -29,10 +29,10 @@ curl --location 'https://anuneko.com/api/v1/msg/会话id/stream' \
 ```
 
 通了
-![](../assets/images/anuneko-2.png)
+![](../assets/images/anuneko-2.webp)
 
 然后还有一种情况，在遇到Pick的时候，我们要发送要选择的回复编号
-![](../assets/images/anuneko-3.png)
+![](../assets/images/anuneko-3.webp)
 
 发个如图请求帮橘猫选择
 ```

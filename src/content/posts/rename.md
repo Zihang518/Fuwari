@@ -2,7 +2,7 @@
 title: 记录一下批量重命名插件咋写的
 published: 2025-09-06T01:59:26
 description: '因为重装系统了，一些小插件丢失了，要重写，然后又把之前的坑踩了一遍'
-image: '../assets/images/2025-09-06-02-01-14-image.png'
+image: '../assets/images/2025-09-06-02-01-14-image.webp'
 tags: [Python]
 
 draft: false 
@@ -61,4 +61,4 @@ lang: ''
 
 这下就对了
 
-![](../assets/images/2025-09-06-02-06-32-image.png)
+![](../assets/images/2025-09-06-02-06-32-image.webp)

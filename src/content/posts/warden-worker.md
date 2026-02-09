@@ -2,7 +2,7 @@
 title: 你可曾想过，直接将BitWarden部署到Cloudflare Worker？
 published: 2026-01-26T17:00:52
 description: warden-worker就是这样一个项目，它将Rust编译为WASM，然后部署到Cloudflare Worker，无需VPS，无需家里云，只需点点鼠标就可免费用上自己的密码托管！
-image: ../assets/images/warden-worker.png
+image: ../assets/images/warden-worker.webp
 tags:
   - Cloudflare
   - Bitwarden
@@ -23,11 +23,11 @@ lang: ""
 wrangler d1 create warden-sql
 ```
 
-![](../assets/images/warden-worker-25.png)
+![](../assets/images/warden-worker-25.webp)
 
 替换 **wrangler.jsonc** 的数据库ID
 
-![](../assets/images/warden-worker-26.png)
+![](../assets/images/warden-worker-26.webp)
 
 初始化数据库
 
@@ -35,7 +35,7 @@ wrangler d1 create warden-sql
 wrangler d1 execute warden-sql --remote --file=sql/schema_full.sql
 ```
 
-![](../assets/images/warden-worker-27.png)
+![](../assets/images/warden-worker-27.webp)
 
 编译Rust WASM
 
@@ -54,7 +54,7 @@ wrangler deploy
 wrangler secret put ALLOWED_EMAILS
 ```
 
-![](../assets/images/warden-worker-29.png)
+![](../assets/images/warden-worker-29.webp)
 
 设置JWT（脸滚键盘即可）
 
@@ -63,7 +63,7 @@ wrangler secret put JWT_SECRET
 wrangler secret put JWT_REFRESH_SECRET
 ```
 
-![](../assets/images/warden-worker-30.png)
+![](../assets/images/warden-worker-30.webp)
 
 设置2FA加密密钥（32字节Base64编码文本）
 
@@ -77,11 +77,11 @@ Poweshell可以这样生成
 [Convert]::ToBase64String((1..32 | ForEach-Object {Get-Random -Minimum 0 -Maximum 256}))
 ```
 
-![](../assets/images/warden-worker-31.png)
+![](../assets/images/warden-worker-31.webp)
 
 前往控制台绑定域名（若路由需要手动写一条解析到Cloudflare）
 
-![](../assets/images/warden-worker-28.png)
+![](../assets/images/warden-worker-28.webp)
 
 使用移动端Bitwarden创建账号（使用白名单邮箱）
 
@@ -89,7 +89,7 @@ Poweshell可以这样生成
 
 *顺便一提，想要修改邮箱或主密码也可以在网页端进行了*
 
-![](../assets/images/warden-worker-32.png)
+![](../assets/images/warden-worker-32.webp)
 
 将所有已登录的设备登出后再登入则会被要求TOTP
 
@@ -99,4 +99,4 @@ Poweshell可以这样生成
 
 再登录当前密码库，前往 **设置 - 密码库选项 - 导入 - .json**
 
-![](../assets/images/warden-worker-33.png)
+![](../assets/images/warden-worker-33.webp)

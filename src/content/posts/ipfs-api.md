@@ -23,7 +23,7 @@ body使用 `from-data` ，key为 `file` vlaue选择一个图片文件，不宜�
 
 ```bash
 curl --location 'https://ipfs-relay.crossbell.io/upload' \
---form 'file=@"/C:/Users/AcoFork/Pictures/b_53bb4f7fa91d684e72b666504e3fcc1897.jpg"'
+--form 'file=@"/C:/Users/AcoFork/Pictures/b_53bb4f7fa91d684e72b666504e3fcc1897.webp"'
 ```
 
 会返回
@@ -42,4 +42,4 @@ curl --location 'https://ipfs-relay.crossbell.io/upload' \
 
 其中， `web2url` 就是可以直接访问的URL，无CORS限制
 
-![](https://eo-r2.2x.nz/myblog/img/Qmb7hj9NHf9XdSZQ2dsqcSUpdrTuhjbpKJsTqG84X7rFqw.png)
+![](https://eo-r2.2x.nz/myblog/img/Qmb7hj9NHf9XdSZQ2dsqcSUpdrTuhjbpKJsTqG84X7rFqw.webp)

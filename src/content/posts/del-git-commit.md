@@ -2,7 +2,7 @@
 title: 如何让一个文件在Git提交中永远消失？如何丢掉其中一条提交并保持逻辑完整？
 published: 2026-01-24T06:57:21
 description: 我们有时候可能会误操作导致提交了一个不该提交的文件，当你发现的时候，在此之后已经堆砌了很多新的提交...
-image: ../assets/images/del-git-commit-1.png
+image: ../assets/images/del-git-commit-1.webp
 draft: false
 lang: ""
 ---
@@ -39,7 +39,7 @@ git-filter-repo --force --path src/secret.txt --invert-paths
 
 比如这里我们一不小心提交了个 **微信密码** 
 
-![](../assets/images/del-git-commit-2.png)
+![](../assets/images/del-git-commit-2.webp)
 
 我们可以用该命令将其 **剔除** 
 
@@ -48,11 +48,11 @@ git-filter-repo --force --path 微信密码.txt --invert-paths
 ```
 
 
-![](../assets/images/del-git-commit-4.png)
+![](../assets/images/del-git-commit-4.webp)
 
 可以看到，效果非常拔群， **微信密码.txt** 已经不翼而飞了
 
-![](../assets/images/del-git-commit-3.png)
+![](../assets/images/del-git-commit-3.webp)
 
 但是还有个问题，就是我们曾经的 **提交文本** 暴露了 **我们曾经曾上传过微信密码相关的文件** ，虽然实际上文件已经被剔除了
 
@@ -70,7 +70,7 @@ git rebase --onto 4e19d1fc^ 4e19d1fc
 
 这里会报错并自动中断变基进程，Git表示该提交有些文件和当前的提交冲突，无法自动解决冲突
 
-![](../assets/images/del-git-commit-5.png)
+![](../assets/images/del-git-commit-5.webp)
 
 由于我们要以当前提交为准，仅剔除中间的提交，所以我们使用该命令 **以当前提交为基准，解决所有文件的冲突** 
 
@@ -83,7 +83,7 @@ git checkout --theirs .
 git add -A
 ```
 
-![](../assets/images/del-git-commit-6.png)
+![](../assets/images/del-git-commit-6.webp)
 
 继续变基进程
 
@@ -93,11 +93,11 @@ git rebase --continue
 
 这里会弹出一个修改Git提交的vim，直接关掉即可。 **ESC** + **\:q** 
 
-![](../assets/images/del-git-commit-7.png)
+![](../assets/images/del-git-commit-7.webp)
 
 如果中途又停下来重复上面几步即可。最终，检查你的本地提交，确认要删除的提交已经不再存在。并且目前工作区的文件没有任何更改，仅更改了Git历史提交记录
 
-![](../assets/images/del-git-commit-9.png)
+![](../assets/images/del-git-commit-9.webp)
 
 最后，我们需要将本地仓库 **覆写** 到远程仓库，由于最开始的PIP包在命令执行完毕后会将远程仓库删除，我们此时需要重新添加回来
 
@@ -124,19 +124,19 @@ https://github.com/{user}/{repo}/commit/{commit id}
 
 点击我的工单
 
-![](../assets/images/del-git-commit-10.png)
+![](../assets/images/del-git-commit-10.webp)
 
 新工单
 
-![](../assets/images/del-git-commit-11.png)
+![](../assets/images/del-git-commit-11.webp)
 
 从我拥有或控制的存储库中删除数据
 
-![](../assets/images/del-git-commit-12.png)
+![](../assets/images/del-git-commit-12.webp)
 
 删除其他数据
 
-![](../assets/images/del-git-commit-13.png)
+![](../assets/images/del-git-commit-13.webp)
 
 接下来填写工单，你可以参考我的主题与正文（生成与 OpenAI ChatGPT 5.2）
 
@@ -161,16 +161,16 @@ Best regards,
 {user}
 ```
 
-![](../assets/images/del-git-commit-14.png)
+![](../assets/images/del-git-commit-14.webp)
 
 最后点击 **Continue** ，新版工单系统会自动使用Copilot为你生成一些帮助信息，等他BB完，我们继续创建即可
 
 马上，你就会收到一封来自Github的邮件，表示Github已经收到您的工单。耐心等待Github的下一步回复即可
 
-![](../assets/images/del-git-commit-15.png)
+![](../assets/images/del-git-commit-15.webp)
 
 Update...
 
 Github支持在12分钟后就删除了相关内容，这真的很高效
 
-![](../assets/images/del-git-commit-16.png)
+![](../assets/images/del-git-commit-16.webp)

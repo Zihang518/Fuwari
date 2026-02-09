@@ -2,7 +2,7 @@
 title: 简洁的wordpress评论回复插件示例
 published: 2025-08-21
 description: 'Wordpress回复插件'
-image: 'https://imgbed.112601.xyz/file/1755431020051.png'
+image: 'https://imgbed.112601.xyz/file/1755431020051.webp'
 tags: [wordpress]
 category: '记录'
 draft: false 
@@ -13,7 +13,7 @@ lang: ''
 
 [https://github.com/yunsen2025/wordpress-pinglunhuifu](https://github.com/yunsen2025/wordpress-pinglunhuifu)
 # 效果演示
-![alt text](https://imgbed.112601.xyz/file/1755431020051.png)
+![alt text](https://imgbed.112601.xyz/file/1755431020051.webp)
 # 关于代码
 [https://www.yunsen2025.top/007-wp-ping-lun-hui-fu-cha-jian/](https://www.yunsen2025.top/007-wp-ping-lun-hui-fu-cha-jian/)   
 必应搜的优化了一下，不满意的可以自由更换插件中的邮件html内容  

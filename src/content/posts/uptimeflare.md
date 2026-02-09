@@ -2,7 +2,7 @@
 title: 超高校级的监控服务：UptimeFlare！基于CF Worker！自托管！声明式！新手友好！
 published: 2026-01-03T03:10:53
 description: 谁不想拥有一个监控自己服务的服务呢？
-image: ../assets/images/uptimeflare.png
+image: ../assets/images/uptimeflare.webp
 draft: false
 lang: ""
 ---
@@ -22,7 +22,7 @@ lang: ""
 编辑后推送，会自动触发Github Action的自动部署，它会自动将KV内的数据迁移到D1
 
 这迁移到D1何意味
-![](../assets/images/uptimeflare-16.png)
+![](../assets/images/uptimeflare-16.webp)
 
 # 前言
 本来这个教程应该是永远都不会出的，因为在此之前，我曾经给大家介绍了一个无需自托管的监控服务：[UptimeRobot](/posts/uptimerobot/) 
@@ -35,8 +35,8 @@ lang: ""
 它的原理非常简单，一共由三个部分组成
 - **前端**：放在Cloudflare Page，用于给用户展示zhandianzhuangt
 - **后端**：放在Cloudflare Worker，通过 Worker 自带的 **Cron** 每分钟 检查站点状态，并将状态持久化进 **D1** 
-![](../assets/images/uptimeflare-1.png)
-![](../assets/images/uptimeflare-14.png)
+![](../assets/images/uptimeflare-1.webp)
+![](../assets/images/uptimeflare-14.webp)
 
 # 正式开始
 首先我们需要 **Fork** 项目，建议Fork我的项目（由于原项目不知道为什么不给在某些地方注入环境变量，所以建议Fork我的）
@@ -49,23 +49,23 @@ lang: ""
 
 
 接下来将该Token绑定到你的Github仓库
-![](../assets/images/uptimeflare-4.png)
+![](../assets/images/uptimeflare-4.webp)
 
 最后，来到 `Action` 页面，手动创建一个 `Deploy to Cloudflare` 的工作流
-![](../assets/images/uptimeflare-5.png)
+![](../assets/images/uptimeflare-5.webp)
 
 等待工作流运行结束，你应该可以在Cloudflare仪表板看见一个新的Page，新的Worker和新的D1
-![](../assets/images/uptimeflare-6.png)
+![](../assets/images/uptimeflare-6.webp)
 
 
 点开 Page，注意不要点错了
-![](../assets/images/uptimeflare-8.png)
+![](../assets/images/uptimeflare-8.webp)
 
 绑定你的域名，尝试访问
-![](../assets/images/uptimeflare-9.png)
+![](../assets/images/uptimeflare-9.webp)
 
 如果你能看到一个初始的监控页面，则正常
-![](../assets/images/uptimeflare-10.png)
+![](../assets/images/uptimeflare-10.webp)
 
 接下来，我们开始自定义该监控
 
@@ -78,14 +78,14 @@ UptimeFlare非常自由，你可以在 `callbacks` 中编写故障时要做的�
 首先前往 https://resend.com/
 
 添加一个域名（作为你的发信域名）
-![](../assets/images/uptimeflare-11.png)
+![](../assets/images/uptimeflare-11.webp)
 
 创建一个发信API Key
-![](../assets/images/uptimeflare-12.png)
+![](../assets/images/uptimeflare-12.webp)
 
 添加环境变量： `RESEND_API_KEY` 将其绑定到 **Action**
 
-![](../assets/images/uptimeflare-13.png)
+![](../assets/images/uptimeflare-13.webp)
 
 编辑 `uptime.config.ts` 的 `webhook.payload` 部分
 
@@ -100,7 +100,7 @@ UptimeFlare非常自由，你可以在 `callbacks` 中编写故障时要做的�
 ```
 
 接下来，当服务故障/重新上线就会通知你啦~
-![](../assets/images/1dc1a98a404db83e909c1f87e8a115cf.png)
+![](../assets/images/1dc1a98a404db83e909c1f87e8a115cf.webp)
 
 最终效果：
 ::url{href="https://ok.2x.nz"}

@@ -102,7 +102,7 @@ params:
   # 是否禁用主题切换按钮
   disableThemeToggle: false
   assets:
-    favicon: "/你的/网站图标.jpg" # 需要在static文件夹放置对应的图片
+    favicon: "/你的/网站图标.webp" # 需要在static文件夹放置对应的图片
     iconHeight: 35
   # 首页信息配置
   homeInfoParams:
@@ -117,7 +117,7 @@ params:
   # 网站头像设置 (显示在导航栏)
   label:
     text: "左上角显示的文本"
-    icon: "/你的/左上角显示的图片.jpg" # 这将显示在导航栏标题旁边。需要在static文件夹放置对应的图片
+    icon: "/你的/左上角显示的图片.webp" # 这将显示在导航栏标题旁边。需要在static文件夹放置对应的图片
     iconHeight: 35
 
   # 社交图标 (显示在简介下方)

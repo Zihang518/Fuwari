@@ -6,4 +6,4 @@ level: "happy"
 
 以及你怎么知道...
 
-![](../assets/images/afc68c43e47a573dfa29ced41b56e3ce.jpg)
+![](../assets/images/afc68c43e47a573dfa29ced41b56e3ce.webp)

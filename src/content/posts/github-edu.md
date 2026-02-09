@@ -2,7 +2,7 @@
 title: Github新版学生认证怎么过？用记事本！
 published: 2025-08-08
 description: '突然被粉丝怂恿来弄Github学生认证，弄了半天，被我发现了奇技淫巧？？？'
-image: '../assets/images/2025-08-08-01-01-00-image.png'
+image: '../assets/images/2025-08-08-01-01-00-image.webp'
 tags: [Github]
 category: '教程'
 draft: false 
@@ -21,15 +21,15 @@ lang: ''
 
 如果不是，请进行更改，然后**一定要重登Github！**
 
-![](../assets/images/2025-08-08-01-03-14-image.png)
+![](../assets/images/2025-08-08-01-03-14-image.webp)
 
 接下来前往 [GitHub · Where software is built](https://github.com/settings/education/benefits) 推荐使用校园网或者流量
 
-![](../assets/images/2025-08-08-01-05-18-image.png)
+![](../assets/images/2025-08-08-01-05-18-image.webp)
 
 按需选
 
-![](../assets/images/2025-08-08-01-06-02-image.png)
+![](../assets/images/2025-08-08-01-06-02-image.webp)
 
 这里拍照注意！如果你的证件没有英文版的，请不要直接拍原件
 
@@ -39,11 +39,11 @@ lang: ''
 
 然后用手机拍照即可
 
-![](../assets/images/2025-08-08-01-06-56-image.png)
+![](../assets/images/2025-08-08-01-06-56-image.webp)
 
 不出意外，批准！
 
-![](../assets/images/2025-08-08-01-07-22-image.png)
+![](../assets/images/2025-08-08-01-07-22-image.webp)
 
 # 疑难解答
 
