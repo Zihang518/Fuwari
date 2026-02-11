@@ -111,7 +111,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "GitHub",
 			icon: "github", // Local icon
-			url: "https://github.com/Zihang518",
+			url: "https://github.com/XuexGao",
 		},
 	],
 };
@@ -141,7 +141,7 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 
 export const gitHubEditConfig: GitHubEditConfig = {
 	enable: true,
-	baseUrl: "https://github.com/Zihang518/Fuwari/blob/main/src/content/posts",
+	baseUrl: "https://github.com/XuexGao/Fuwari/blob/main/src/content/posts",
 };
 
 // todoConfig removed from here
