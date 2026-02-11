@@ -6,7 +6,6 @@ import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import swup from "@swup/astro";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
-import { defineConfig } from "astro/config";
 import { defineConfig, passthroughImageService } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeComponents from "rehype-components"; /* Render the custom directive content */
@@ -35,7 +34,7 @@ export default defineConfig({
 	base: "/",
 	trailingSlash: "always",
 	output: "static",
-	},
+	
 	integrations: [
 		tailwind({
 			nesting: true,
