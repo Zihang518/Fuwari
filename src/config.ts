@@ -11,15 +11,16 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "AcoFork Blog",
+	title: "XieGai Blog",
+	
 	subtitle: "技术分享与实践",
 	description:
-		"分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验的个人技术博客，专注于云原生、无服务器架构和前后端开发，作者为afoim/二叉树树",
+		"分享刷机技术、网络技术、服务器部署、静态网站搭建等技术教程与实践经验的个人技术博客。",
 
 	keywords: [],
 	lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko', 'es', 'th'
 	themeColor: {
-		hue: 361, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
+		hue: 210, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
 		forceDarkMode: false, // Force dark mode and hide theme switcher
 	},
@@ -51,19 +52,17 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		// Leave this array empty to use the default favicon
 		{
-			src: "https://q2.qlogo.cn/headimg_dl?dst_uin=2726730791&spec=0", // Path of the favicon, relative to the /public directory
+			src: "https://q2.qlogo.cn/headimg_dl?dst_uin=1077566889&spec=0", // Path of the favicon, relative to the /public directory
 			//   theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
 			//   sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
 		},
 	],
 	officialSites: [
-		{ url: "https://acofork.com", alias: "CN" },
-		{ url: "https://2x.nz", alias: "Global" },
+		{ url: "https://xiegao.top", alias: "CN" },
+		{ url: "https://xiegao.top", alias: "Global" },
 	],
 	server: [
 		{ url: "", text: "Blog" },
-		{ url: "https://u.2x.nz", text: "Umami" },
-		{ url: "https://p.2x.nz", text: "RandomPic" },
 	],
 };
 
@@ -82,42 +81,37 @@ export const navBarConfig: NavBarConfig = {
 			external: false, // Show an external link icon and will open in a new tab
 		},
 		{
-			name: "统计",
-			url: "https://u.2x.nz/share/CdkXbGgZr6ECKOyK", // Internal links should not include the base path, as it is automatically added
-			external: true, // Show an external link icon and will open in a new tab
-		},
-		{
-			name: "论坛",
-			url: "https://i.2x.nz", // Internal links should not include the base path, as it is automatically added
+			name: "云盘",
+			url: "https://pan.xiegao.top", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 	],
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "https://q2.qlogo.cn/headimg_dl?dst_uin=2726730791&spec=0", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "二叉树树",
+	avatar: "https://q2.qlogo.cn/headimg_dl?dst_uin=1077566889&spec=0", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	name: "雪xie高",
 	bio: "Protect What You Love.",
 	links: [
 		{
 			name: "QQ",
 			icon: "qq", // Local icon
-			url: "https://qm.qq.com/q/FWqOHlwL2m",
+			url: "https://qm.qq.com/q/vnq8axQlPy",
 		},
 		{
 			name: "Telegram",
 			icon: "telegram", // Local icon
-			url: "https://t.me/+_07DERp7k1ljYTc1",
+			url: "https://t.me/zihang518",
 		},
 		{
 			name: "Bilibli",
 			icon: "bilibili", // Local icon
-			url: "https://space.bilibili.com/325903362",
+			url: "https://space.bilibili.com/2083649546",
 		},
 		{
 			name: "GitHub",
 			icon: "github", // Local icon
-			url: "https://github.com/afoim",
+			url: "https://github.com/Zihang518",
 		},
 	],
 };
@@ -136,8 +130,8 @@ export const imageFallbackConfig: ImageFallbackConfig = {
 
 export const umamiConfig: UmamiConfig = {
 	enable: true,
-	baseUrl: "https://u.2x.nz",
-	shareId: "CdkXbGgZr6ECKOyK",
+	baseUrl: "https://cloud.umami.is",
+	shareId: "gR4yWp3kIRIKyBB7",
 	timezone: "Asia/Shanghai",
 };
 
@@ -147,7 +141,7 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 
 export const gitHubEditConfig: GitHubEditConfig = {
 	enable: true,
-	baseUrl: "https://github.com/afoim/fuwari/blob/main/src/content/posts",
+	baseUrl: "https://github.com/Zihang518/Fuwari/blob/main/src/content/posts",
 };
 
 // todoConfig removed from here
