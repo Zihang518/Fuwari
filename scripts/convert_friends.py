@@ -1,7 +1,7 @@
 import re
 import json
 import os
-
+## 123
 def extract_friend_data(html_content):
     """从HTML内容中提取友链数据"""
     # 匹配友链卡片的正则表达式
