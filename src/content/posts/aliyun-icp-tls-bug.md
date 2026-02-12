@@ -47,7 +47,7 @@ lang: ""
 
 - **解析逻辑**：阿里云网关的 DPI 引擎似乎**仅检测 TLS 握手的第一个 TCP 数据包**。
 - **截断失效**：对于分片的 Client Hello，SNI 扩展虽然通常在第一个包中，但由于 TLS Record Layer 的 `Length` 字段指示的长度（如 1800）远大于实际接收到的第一个分片长度（如 1400），DPI 引擎会判断为报文不完整或无法解析。
-- **策略选择**：为了避免在高并发下进行昂贵的 TCP 流重组（Stream Reassembly），或者避免误杀（False Positive），DPI 采取了 **Fail-Open** 策略，即**“看不懂就放行”**。
+- **策略选择**：为了避免在高并发下进行昂贵的 TCP 流重组（Stream Reassembly），或者避免误杀（False Positive），DPI 采取了 **Fail-Open** 策略，即 **“看不懂就行”**。
 
 ### 3.3 关键抓包证据 (Wireshark Frames)
 
