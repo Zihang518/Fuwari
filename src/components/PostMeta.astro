@@ -87,40 +87,27 @@ const className = Astro.props.class;
     // 获取访问量统计 (Archived: Old Logic)
     /*
     async function fetchPageViews() {
-        // 如果你没在 config 里开启 umami 或者没填 shareId，就直接退出
-        if (!umamiConfig || !umamiConfig.shareId) return;
+    try {
+        const shareId = "gR4yWp3kIRIKyBB7";
+        // 这里如果是列表页，slug 是通过变量传入的
+        const path = "/posts/" + slug + "/"; 
+        
+        const fetchUrl = "https://cloud.umami.is/api/share/" + shareId + "/stats?path=" + path;
 
-        try {
-            // 💡 直接请求 Umami 官方的公开数据接口
-            // 这里的 umamiConfig.shareId 会自动从你的配置文件读取
-            const url = `https://cloud.umami.is/api/share/${umamiConfig.shareId}/stats?path=/posts/${slug}/`;
-            
-            const response = await fetch(url);
-            
-            if (!response.ok) {
-                // 如果官方接口报错（比如你没开启“公开分享”），我们静默处理，不报红字
-                return;
-            }
+        const response = await fetch(fetchUrl);
+        if (!response.ok) return;
 
-            const data = await response.json();
-            
-            // Umami 返回的数据结构中，pageviews.value 是总浏览量
-            const pageViews = data.pageviews?.value || 0;
-            
-            const viewsElement = document.getElementById(`page-views-${slug}`);
-            if (viewsElement) {
-                // 只有当数字大于 0 时才展示动画，否则显示“暂无”或“0”
-                if (pageViews > 0) {
-                    animateValue(viewsElement, 0, pageViews, 1000, '次');
-                } else {
-                    viewsElement.innerHTML = "0 次";
-                }
-            }
-        } catch (error) {
-            // 彻底捕获错误，不让它在控制台变红
-            console.log("Umami stats sync skipped."); 
+        const data = await response.json();
+        const views = data.pageviews?.value || 0;
+        
+        const viewsElement = document.getElementById("page-views-" + slug);
+        if (viewsElement) {
+            viewsElement.innerHTML = views + " 次";
         }
+    } catch (error) {
+        // 静默处理
     }
+}
             
             // 如果数据来自缓存，直接显示结果，跳过动画
             if (statsData._fromCache) {
