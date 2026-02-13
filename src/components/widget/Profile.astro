@@ -103,37 +103,26 @@ for (const post of posts) {
     // 获取全站访问量统计 (Archived: Old Logic)
     /*
     async function loadSiteStats() {
-        if (!umamiConfig.enable) return;
-        try {
-            const statsData = await fetchUmamiStats(umamiConfig.baseUrl, umamiConfig.shareId, {
-                timezone: umamiConfig.timezone
-            });
-            
-            const pageviews = statsData.pageviews || 0;
-            const visitors = statsData.visitors || 0;
-            
-            const viewsElement = document.getElementById('site-views');
-            const visitorsElement = document.getElementById('site-visitors');
-            
-            if (viewsElement) {
-                const startVal = parseInt(viewsElement.textContent) || 0;
-                // 如果当前值已经是目标值，就不执行动画
-                if (startVal !== pageviews) {
-                    animateValue(viewsElement, startVal, pageviews, 1000);
-                }
-            }
-            
-            if (visitorsElement) {
-                const startVal = parseInt(visitorsElement.textContent) || 0;
-                // 如果当前值已经是目标值，就不执行动画
-                if (startVal !== visitors) {
-                    animateValue(visitorsElement, startVal, visitors, 1000);
-                }
-            }
-        } catch (error) {
-            console.error('获取全站统计失败:', error);
+    try {
+        const shareId = "gR4yWp3kIRIKyBB7";
+        // 全站统计不需要带 ?path= 参数
+        const fetchUrl = "https://cloud.umami.is/api/share/" + shareId + "/stats";
+
+        const response = await fetch(fetchUrl);
+        if (!response.ok) return;
+
+        const data = await response.json();
+        // 获取全站总访问量
+        const totalViews = data.pageviews?.value || 0;
+        
+        const element = document.getElementById("total-possible-id"); // 请确认你 HTML 里的 ID
+        if (element) {
+            element.innerHTML = totalViews;
         }
+    } catch (error) {
+        // 静默处理
     }
+}
     */
 
     // 获取全站访问量统计 (New Logic)
