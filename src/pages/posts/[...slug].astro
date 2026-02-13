@@ -315,42 +315,29 @@ const jsonLd = [
     /*
     async function loadPageViews() {
     async function loadPageViews() {
-        // 如果没有配置 shareId，直接退出
-        if (!umamiConfig || !umamiConfig.shareId) return;
+    try {
+        const shareId = "gR4yWp3kIRIKyBB7"; // 直接写死 ID，最稳妥
+        const pathname = window.location.pathname; // 自动获取当前文章路径
         
-        try {
-            // 解析出路径名，确保格式正确
-            let pathname = postUrl;
-            if (pathname.startsWith('http')) {
-                pathname = new URL(pathname).pathname;
-            }
+        // 使用加号拼接，防止解析错误
+        const fetchUrl = "https://cloud.umami.is/api/share/" + shareId + "/stats?path=" + pathname;
 
-            // 💡 使用 Umami 官方 API
-            const response = await fetch(`https://cloud.umami.is/api/share/gR4yWp3kIRIKyBB7/stats?path=${pathname}`);
-            
-            if (!response.ok) return;
-            
-            const data = await response.json();
-            // Umami 返回的数据结构中浏览量在 pageviews.value
-            const pageviews = data.pageviews?.value || 0;
+        const response = await fetch(fetchUrl);
+        if (!response.ok) return;
 
-            const element = document.getElementById('post-pageviews');
-            
-            if (element) {
-                const startVal = parseInt(element.textContent) || 0;
-                if (startVal !== pageviews) {
-                    if (startVal === 0) {
-                        animateValue(element, startVal, pageviews, 1000);
-                    } else {
-                        element.innerHTML = pageviews;
-                    }
-                }
-            }
-        } catch (error) {
-            // 彻底捕获错误，控制台保持干净
-            console.log("Post stats sync skipped.");
+        const data = await response.json();
+        // Umami 官方返回的数据在 pageviews.value 中
+        const pageviews = data.pageviews?.value || 0;
+
+        const element = document.getElementById('post-pageviews');
+        if (element) {
+            // 这里你可以保留原有的 animateValue 动画，或者直接赋值
+            element.innerHTML = pageviews;
         }
+    } catch (error) {
+        // 捕获错误，不报红字
     }
+}
                 
                 const startVal = parseInt(element.textContent) || 0;
                 
