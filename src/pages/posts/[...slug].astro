@@ -313,28 +313,24 @@ const jsonLd = [
 
     // Archived: Old Logic
     /*
-    async function loadPageViews() {
-    async function loadPageViews() {
+async function loadPageViews() {
     try {
-        const shareId = "gR4yWp3kIRIKyBB7"; // 直接写死 ID，最稳妥
-        const pathname = window.location.pathname; // 自动获取当前文章路径
+        const shareId = "gR4yWp3kIRIKyBB7"; 
+        const path = window.location.pathname;
+        const api = "https://cloud.umami.is/api/share/" + shareId + "/stats?path=" + path;
         
-        const response = await fetch("https://cloud.umami.is/api/share/gR4yWp3kIRIKyBB7/stats?path=" + window.location.pathname);
-
-        const response = await fetch(fetchUrl);
+        const response = await fetch(api);
         if (!response.ok) return;
 
         const data = await response.json();
-        // Umami 官方返回的数据在 pageviews.value 中
-        const pageviews = data.pageviews?.value || 0;
+        const views = data.pageviews?.value || 0;
 
         const element = document.getElementById('post-pageviews');
         if (element) {
-            // 这里你可以保留原有的 animateValue 动画，或者直接赋值
-            element.innerHTML = pageviews;
+            element.innerHTML = views;
         }
-    } catch (error) {
-        // 捕获错误，不报红字
+    } catch (e) {
+        console.log("Stats update skipped.");
     }
 }
                 
