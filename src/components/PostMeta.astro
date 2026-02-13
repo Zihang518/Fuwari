@@ -87,27 +87,38 @@ const className = Astro.props.class;
     // 获取访问量统计 (Archived: Old Logic)
     /*
     async function fetchPageViews() {
-        try {
-            const response = await fetch(`https://t.2x.nz/share?pathname=/posts/${slug}/`, {
-                // 重点：加上 mode: 'no-cors'，虽然拿不到准确数字，但能阻止浏览器报严重的 CORS 错误
-                mode: 'no-cors', 
-                cache: 'no-cache'
-            });
-            
-            // 如果接口挂了或者不给数据，直接退出，不写错误日志
-            if (!response.ok && response.type !== 'opaque') return;
+        // 如果你没在 config 里开启 umami 或者没填 shareId，就直接退出
+        if (!umamiConfig || !umamiConfig.shareId) return;
 
-            // 注意：由于 CORS 限制，opaque 响应无法通过 .json() 读取内容
-            // 这里的逻辑如果依然无法显示数字，说明对方彻底封死了外部访问
+        try {
+            // 💡 直接请求 Umami 官方的公开数据接口
+            // 这里的 umamiConfig.shareId 会自动从你的配置文件读取
+            const url = `https://cloud.umami.is/api/share/${umamiConfig.shareId}/stats?path=/posts/${slug}/`;
+            
+            const response = await fetch(url);
+            
+            if (!response.ok) {
+                // 如果官方接口报错（比如你没开启“公开分享”），我们静默处理，不报红字
+                return;
+            }
+
             const data = await response.json();
-            const pageViews = data.views || 0;
+            
+            // Umami 返回的数据结构中，pageviews.value 是总浏览量
+            const pageViews = data.pageviews?.value || 0;
             
             const viewsElement = document.getElementById(`page-views-${slug}`);
             if (viewsElement) {
-                animateValue(viewsElement, 0, pageViews, 1000, '次');
+                // 只有当数字大于 0 时才展示动画，否则显示“暂无”或“0”
+                if (pageViews > 0) {
+                    animateValue(viewsElement, 0, pageViews, 1000, '次');
+                } else {
+                    viewsElement.innerHTML = "0 次";
+                }
             }
         } catch (error) {
-            // 💡 彻底消音：删掉 console.error(error)，让控制台干干净净
+            // 彻底捕获错误，不让它在控制台变红
+            console.log("Umami stats sync skipped."); 
         }
     }
             
