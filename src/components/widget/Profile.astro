@@ -140,7 +140,7 @@ for (const post of posts) {
     async function loadSiteStats() {
         // if (!umamiConfig.enable) return; // Optional check
         try {
-            const response = await fetch('https://t.2x.nz/share?pathname=/');
+            const response = await fetch('https://cloud.umami.is/api/share/${umamiConfig.shareId}/stats');
             if (!response.ok) return;
             const data = await response.json();
             const pageviews = data.views || 0;
