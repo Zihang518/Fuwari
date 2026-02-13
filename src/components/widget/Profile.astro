@@ -102,25 +102,26 @@ for (const post of posts) {
 
     // 获取全站访问量统计 (Archived: Old Logic)
     /*
-    async function loadSiteStats() {
+    // 在 [...slug].astro 的 loadPageViews 函数里
+async function loadPageViews() {
     try {
-        const shareId = "gR4yWp3kIRIKyBB7";
+        // 直接用字符串拼接，一个大括号都不许出现
+        const shareId = "gR4yWp3kIRIKyBB7"; 
+        const path = window.location.pathname;
+        const api = "https://cloud.umami.is/api/share/" + shareId + "/stats?path=" + path;
         
-        const response = await fetch("https://cloud.umami.is/api/share/gR4yWp3kIRIKyBB7/stats?path=" + window.location.pathname);
-
-        const response = await fetch(fetchUrl);
+        const response = await fetch(api);
         if (!response.ok) return;
 
         const data = await response.json();
-        // 获取全站总访问量
-        const totalViews = data.pageviews?.value || 0;
-        
-        const element = document.getElementById("total-possible-id"); // 请确认你 HTML 里的 ID
+        const views = data.pageviews?.value || 0;
+
+        const element = document.getElementById('post-pageviews');
         if (element) {
-            element.innerHTML = totalViews;
+            element.innerHTML = views;
         }
-    } catch (error) {
-        // 静默处理
+    } catch (e) {
+        console.log("Stats update skipped.");
     }
 }
     */
