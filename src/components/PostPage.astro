@@ -12,7 +12,7 @@ const interval = 50;
 <div class="transition flex flex-col rounded-[var(--radius-large)] bg-transparent gap-4 mb-4">
 
     {page.data.map((entry: CollectionEntry<"posts">, index) => (
-        <div class="onload-animation" style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}>
+        <article class="onload-animation" style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}>
             <PostCard
                     entry={entry}
                     title={entry.data.title}
@@ -24,6 +24,6 @@ const interval = 50;
                     draft={entry.data.draft}
                     loading={index < 2 ? "eager" : "lazy"}
             ></PostCard>
-        </div>
+        </article>
     ))}
 </div>

@@ -30,7 +30,11 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://xiegao.top",
+image: {
+                service: passthroughImageService()
+        },
+        site: "https://xiegao.top",       
+ upstream/main
 	base: "/",
 	trailingSlash: "always",
 	output: "static",

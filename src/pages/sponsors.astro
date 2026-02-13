@@ -10,9 +10,29 @@ const sponsors = Object.values(
 		import: "default",
 	}),
 );
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": Astro.site
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "赞助支持",
+      "item": new URL("/sponsors", Astro.site).toString()
+    }
+  ]
+};
 ---
 
 <MainGridLayout title="赞助支持">
+    <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
     <div class="card-base p-6 md:p-8">
         <div class="flex items-center gap-2 mb-6">
             <div class="h-8 w-8 rounded-lg bg-[var(--primary)] flex items-center justify-center text-white dark:text-black/70">

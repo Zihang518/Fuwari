@@ -54,14 +54,12 @@ const className = Astro.props.class;
                 </div>
                 <span class="text-50 text-sm font-medium" id={`page-views-${slug}`}>0 次</span>
             </div>
-            <!--
             <div class="flex items-center">
                 <div class="meta-icon">
                     <Icon name="material-symbols:person" class="text-xl"></Icon>
                 </div>
                 <span class="text-50 text-sm font-medium" id={`page-visitors-${slug}`}>0 人</span>
             </div>
-            -->
         </>
     )}
 </div>
@@ -84,8 +82,7 @@ const className = Astro.props.class;
         window.requestAnimationFrame(step);
     }
 
-    // 获取访问量统计 (Archived: Old Logic)
-    /*
+    // 获取访问量统计
     async function fetchPageViews() {
         if (!umamiConfig.enable) return;
         try {
@@ -125,33 +122,6 @@ const className = Astro.props.class;
                          animateValue(visitorsElement, currentVisits, visits, 1000, '人');
                     } else {
                          visitorsElement.innerHTML = `${visits} 人`;
-                    }
-                }
-            }
-        } catch (error) {
-            console.error('Error fetching page views:', error);
-        }
-    }
-    */
-
-    // 获取访问量统计 (New Logic)
-    async function fetchPageViews() {
-        // if (!umamiConfig.enable) return; // Optional check
-        try {
-            const response = await fetch(`https://t.2x.nz/share?pathname=/posts/${slug}/`);
-            if (!response.ok) return;
-            const data = await response.json();
-            const pageViews = data.views || 0;
-            
-            const viewsElement = document.getElementById(`page-views-${slug}`);
-            
-            if (viewsElement) {
-                const currentViews = parseInt(viewsElement.textContent) || 0;
-                if (currentViews !== pageViews) {
-                    if (currentViews === 0) {
-                         animateValue(viewsElement, currentViews, pageViews, 1000, '次');
-                    } else {
-                         viewsElement.innerHTML = `${pageViews} 次`;
                     }
                 }
             }

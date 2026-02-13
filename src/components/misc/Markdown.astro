@@ -14,6 +14,28 @@ const className = Astro.props.class;
 </div>
 
 <script>
+const wrapMarkdownTables = () => {
+    document.querySelectorAll(".custom-md table").forEach((table) => {
+        const parent = table.parentElement;
+        if (parent && parent.classList.contains("table-wrapper")) return;
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "table-wrapper";
+        table.parentNode?.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+    });
+};
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", wrapMarkdownTables);
+} else {
+    wrapMarkdownTables();
+}
+
+if ((window as any).swup?.hooks) {
+    (window as any).swup.hooks.on("page:view", wrapMarkdownTables);
+}
+
 document.addEventListener("click", function (e: MouseEvent) {
     const target = e.target as Element | null;
     if (target && target.classList.contains("copy-btn")) {

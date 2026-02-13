@@ -86,10 +86,18 @@ const bannerOffset =
     <html lang={siteLang} class="bg-[var(--page-bg)] transition text-[12px] md:text-[16px] dark">
 
 	<head>
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P8V8663M');</script>
+<!-- End Google Tag Manager -->
 
 		<title>{pageTitle}</title>
 
 		<!-- <meta name="referrer" content="no-referrer"> -->
+		<link rel="canonical" href={Astro.url}>
 		<meta charset="UTF-8" />
 		<meta name="google-adsense-account" content="ca-pub-1683686345039700">
 		<meta name="description" content={description}>
@@ -119,7 +127,9 @@ const bannerOffset =
         <link rel="preconnect" href="https://umami.acofork.com" />
         <link rel="preconnect" href="https://support.nodeget.com" />
 		
-		
+
+        <script src="/js/umami-share.js" defer></script>
+                <script data-swup-ignore-script src="https://p.2x.nz/random.js" defer></script>		
 		
 		
 		{/* <!-- Content Security Policy -->
@@ -235,6 +245,11 @@ const bannerOffset =
 
 	</head>
 	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}>
+
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8V8663M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
 <script data-swup-ignore-script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
@@ -359,9 +374,15 @@ const bannerOffset =
 </script>
 
 <!-- Basic Analytics -->
+<script data-cookie-consent="strictly-necessary" data-swup-ignore-script defer src="https://t.2x.nz/tracker.js"></script>
 <!-- Umami -->
+<<<<<<< HEAD
 <script type="text/plain" data-cookie-consent="strictly-necessary" defer src="https://cloud.umami.is/script.js" data-website-id="fc59d705-e252-4296-88c0-e37ef66e97c5" data-swup-ignore-script></script>
 
+=======
+<script type="text/plain" data-cookie-consent="strictly-necessary" defer src="https://u.2x.nz/script.js" data-website-id="5d710dbd-3a2e-43e3-a553-97b415090c63" data-swup-ignore-script></script>
+<!-- Cloudflare Web Analytics --><script data-cookie-consent="strictly-necessary" defer data-swup-ignore-script src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "15fe148e91b34f10a15652e1a74ab26c"}'></script><!-- End Cloudflare Web Analytics -->
+>>>>>>> upstream/main
 <!-- end of Basic Analytics-->
 
 <!-- Baidu Analytics -->
