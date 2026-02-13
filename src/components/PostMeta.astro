@@ -92,7 +92,7 @@ const className = Astro.props.class;
         // 这里如果是列表页，slug 是通过变量传入的
         const path = "/posts/" + slug + "/"; 
         
-        const fetchUrl = "https://cloud.umami.is/api/share/" + shareId + "/stats?path=" + path;
+        const response = await fetch("https://cloud.umami.is/api/share/gR4yWp3kIRIKyBB7/stats?path=" + window.location.pathname);
 
         const response = await fetch(fetchUrl);
         if (!response.ok) return;
