@@ -38,10 +38,9 @@ export const siteConfig: SiteConfig = {
 		// 博客品牌
 		"Blog",
 		"博客",
-		"afoim",
-		"afoim Blog",
-		"二叉树树",
-		"AcoFork Blog",
+		"XieGao",
+		"XieGao Blog",
+		"雪xie高",
 
 		// 云服务平台
 		"Cloudflare",
@@ -182,7 +181,7 @@ export const siteConfig: SiteConfig = {
 	},
 	background: {
 		enable: true, // Enable background image
-		src: "/random/h", // Background image URL (supports HTTPS)
+		src: "https://p.2x.nz/r/i/h", // Background image URL (supports HTTPS)
 		position: "center", // Background position: 'top', 'center', 'bottom'
 		size: "cover", // Background size: 'cover', 'contain', 'auto'
 		repeat: "no-repeat", // Background repeat: 'no-repeat', 'repeat', 'repeat-x', 'repeat-y'
