@@ -12,8 +12,8 @@ import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
 	
-	title: "雪xie高的网站",
-	subtitle: "XieGao",
+	title: "XieGao Blog",
+	subtitle: "技术分享与实践",
 	description:
 		"雪xie高是一个专注于IT/互联网技术分享与实践的个人技术博客，在这里你可以找到众多前沿技术的分享与实践经验。",
 
