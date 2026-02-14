@@ -102,28 +102,44 @@ for (const post of posts) {
 
     // 获取全站访问量统计 (Archived: Old Logic)
     /*
-    // 在 [...slug].astro 的 loadPageViews 函数里
-async function loadPageViews() {
-    try {
-        // 直接用字符串拼接，一个大括号都不许出现
-        const shareId = "gR4yWp3kIRIKyBB7"; 
-        const path = window.location.pathname;
-        const api = "https://cloud.umami.is/api/share/" + shareId + "/stats?path=" + path;
-        
-        const response = await fetch(api);
-        if (!response.ok) return;
+    async function loadSiteStats() {
+        // 1. 你的自建配置
+        const websiteId = "4696c062-4271-4b8b-8ed7-b481f5961f28";
+        const baseUrl = "https://u.xiegao.top";
 
-        const data = await response.json();
-        const views = data.pageviews?.value || 0;
+        try {
+            const url = `${baseUrl}/api/websites/${websiteId}/stats?startAt=0&endAt=${Date.now()}`;
 
-        const element = document.getElementById('post-pageviews');
-        if (element) {
-            element.innerHTML = views;
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (!response.ok) return;
+
+            const data = await response.json();
+            
+            
+            const pageviews = data.pageviews?.value || 0;
+            
+            const viewsElement = document.getElementById('site-views');
+            
+            if (viewsElement) {
+                const startVal = parseInt(viewsElement.textContent) || 0;
+                if (startVal !== pageviews) {
+                    if (startVal === 0) {
+                        animateValue(viewsElement, startVal, pageviews, 1000);
+                    } else {
+                        viewsElement.innerHTML = pageviews;
+                    }
+                }
+            }
+        } catch (error) {
+            console.warn('获取全站统计失败，请检查 CORS 配置。');
         }
-    } catch (e) {
-        console.log("Stats update skipped.");
     }
-}
     */
 
     // 获取全站访问量统计 (New Logic)
