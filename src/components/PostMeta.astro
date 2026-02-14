@@ -153,27 +153,19 @@ const className = Astro.props.class;
 {slug && (
     <script define:vars={{ slug }}>
     async function fetchPageViews() {
-        const websiteId = "4696c062-4271-4b8b-8ed7-b481f5961f28";
-        const baseUrl = "https://u.xiegao.top";
-        const targetId = `page-views-${slug}`;
-        
+        var websiteId = "4696c062-4271-4b8b-8ed7-b481f5961f28";
+        var baseUrl = "https://u.xiegao.top";
         try {
-            const url = `${baseUrl}/api/websites/${websiteId}/stats?path=/posts/${slug}/&startAt=0&endAt=${Date.now()}`;
-            const response = await fetch(url);
-            if (!response.ok) return;
-
-            const data = await response.json();
-            const pageViews = data.pageviews?.value || 0;
-            const el = document.getElementById(targetId);
-            
-            if (el) {
-                el.innerHTML = `${pageViews} 次`;
+            var url = baseUrl + "/api/websites/" + websiteId + "/stats?path=/posts/" + slug + "/&startAt=0&endAt=" + Date.now();
+            var res = await fetch(url);
+            if (!res.ok) return;
+            var data = await res.json();
+            var el = document.getElementById("page-views-" + slug);
+            if (el && data.pageviews) {
+                el.innerHTML = data.pageviews.value + " 次";
             }
-        } catch (e) {
-            console.warn("Stats error");
-        }
+        } catch (e) { console.error("PV Error"); }
     }
-
     fetchPageViews();
     document.addEventListener('swup:contentReplaced', fetchPageViews);
 </script>
