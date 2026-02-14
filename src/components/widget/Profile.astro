@@ -85,18 +85,18 @@ for (const post of posts) {
 
 <script define:vars={{ umamiConfig }}>
     async function loadSiteStats() {
-        const websiteId = "4696c062-4271-4b8b-8ed7-b481f5961f28";
-        const baseUrl = "https://u.xiegao.top";
+        var websiteId = "4696c062-4271-4b8b-8ed7-b481f5961f28";
+        var baseUrl = "https://u.xiegao.top";
         try {
-            const url = `${baseUrl}/api/websites/${websiteId}/stats?startAt=0&endAt=${Date.now()}`;
-            const res = await fetch(url);
+            var url = baseUrl + "/api/websites/" + websiteId + "/stats?startAt=0&endAt=" + Date.now();
+            var res = await fetch(url);
             if (!res.ok) return;
-            const data = await res.json();
-            const viewsElement = document.getElementById('site-views');
-            if (viewsElement && data.pageviews) {
-                viewsElement.innerHTML = data.pageviews.value;
+            var data = await res.json();
+            var el = document.getElementById('site-views');
+            if (el && data.pageviews) {
+                el.innerHTML = data.pageviews.value;
             }
-        } catch (e) {}
+        } catch (e) { console.error("Stats Error"); }
     }
     document.addEventListener('DOMContentLoaded', loadSiteStats);
     document.addEventListener('swup:contentReplaced', loadSiteStats);
