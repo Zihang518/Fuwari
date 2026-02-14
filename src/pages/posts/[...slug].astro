@@ -313,41 +313,52 @@ const jsonLd = [
 
     // Archived: Old Logic
     /*
-async function loadPageViews() {
+    async function loadPageViews() {
+    // 1. 你的自建配置
+    const websiteId = "4696c062-4271-4b8b-8ed7-b481f5961f28";
+    const baseUrl = "https://u.xiegao.top";
+    
+    // 自动获取当前路径，适配 /posts/slug/ 这种格式
+    let pathname = window.location.pathname;
+
     try {
-        const shareId = "gR4yWp3kIRIKyBB7"; 
-        const path = window.location.pathname;
-        const api = "https://cloud.umami.is/api/share/" + shareId + "/stats?path=" + path;
-        
-        const response = await fetch(api);
+        // 2. 调用自建 Umami 的 stats 接口
+        // startAt=0 确保获取历史总访问量
+        const url = `${baseUrl}/api/websites/${websiteId}/stats?path=${pathname}&startAt=0&endAt=${Date.now()}`;
+
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
         if (!response.ok) return;
 
         const data = await response.json();
-        const views = data.pageviews?.value || 0;
-
+        
+        // 3. 提取数据并显示
+        // 自建版 Umami 的标准结构是 data.pageviews.value
+        const pageviews = data.pageviews?.value || 0;
         const element = document.getElementById('post-pageviews');
+        
         if (element) {
-            element.innerHTML = views;
-        }
-    } catch (e) {
-        console.log("Stats update skipped.");
-    }
-}
-                
-                const startVal = parseInt(element.textContent) || 0;
-                
-                if (startVal !== pageviews) {
-                    if (startVal === 0) {
-                        animateValue(element, startVal, pageviews, 1000);
-                    } else {
-                        element.innerHTML = pageviews;
-                    }
+            // 获取当前显示的数字，如果没有则默认为 0
+            const startVal = parseInt(element.textContent) || 0;
+            
+            if (startVal !== pageviews) {
+                if (startVal === 0) {
+                    // 调用原作者定义的动画函数
+                    animateValue(element, startVal, pageviews, 1000);
+                } else {
+                    element.innerHTML = pageviews;
                 }
             }
-        } catch (error) {
-            console.error('获取页面访问量失败:', error);
         }
+    } catch (error) {
+        console.warn('获取自建统计数据失败，可能是跨域问题。');
     }
+}
     */
 
     // New Logic
