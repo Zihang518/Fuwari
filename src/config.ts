@@ -82,9 +82,9 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "统计"
-			url: "https://u.xiegao.top"
+			url: "https://u.xiegao.top/share/IoWiNCvTUPxaDg5x"
             external: true
-		}
+		},
 		{
 			name: "云盘",
 			url: "https://pan.xiegao.top", // Internal links should not include the base path, as it is automatically added
